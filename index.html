@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="img/logo.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JOLS SAS | Exportadora Ecuatoriana — Calidad Premium para Mercados Internacionales</title>
+<meta name="description" content="JOLS SAS exporta frutas, tubérculos, mariscos, productos liofilizados y pellets de madera desde Ecuador hacia más de 30 países con los más altos estándares de calidad.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#0d5c3f;
+  --green-dark:#093d2b;
+  --green-deep:#062e20;
+  --gold:#d9a441;
+  --amber:#e8a33d;
+  --dark:#0f172a;
+  --ink:#243b35;
+  --muted:#6b7f78;
+  --bg:#f6f6f2;
+  --white:#ffffff;
+  --radius:18px;
+  --shadow:0 18px 45px rgba(9,61,43,.12);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;color:var(--ink);background:var(--white);line-height:1.7;overflow-x:hidden}
+h1,h2,h3,.serif{font-family:'Playfair Display',serif}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,92%);margin:0 auto}
+section{position:relative}
+
+/* ---------- HEADER ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:1000;transition:.35s;padding:18px 0}
+header.scrolled{background:rgba(255,255,255,.92);backdrop-filter:blur(14px);box-shadow:0 6px 24px rgba(0,0,0,.08);padding:10px 0}
+.nav-wrap{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-mark{width:52px;height:52px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 6px 16px rgba(0,0,0,.18);overflow:hidden;padding:5px}
+.logo-mark img{width:100%;height:100%;object-fit:contain}
+.logo-text{font-family:'Playfair Display',serif;font-weight:700;font-size:26px;color:var(--green);letter-spacing:1px;line-height:1}
+.logo-text small{display:block;font-family:'Poppins',sans-serif;font-size:9px;font-weight:500;letter-spacing:3.5px;color:var(--gold);text-transform:uppercase}
+header:not(.scrolled) .logo-text{color:#fff}
+header:not(.scrolled) .logo-text small{color:var(--gold)}
+nav.main{display:flex;align-items:center;gap:34px}
+nav.main a{font-size:14.5px;font-weight:500;color:rgba(255,255,255,.92);position:relative;transition:.25s}
+header.scrolled nav.main a{color:var(--ink)}
+header.scrolled nav.main a.btn,nav.main a.btn{color:#fff}
+nav.main a.btn::after{display:none}
+nav.main a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--gold);transition:.3s}
+nav.main a:hover::after{width:100%}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 30px;border-radius:100px;font-weight:600;font-size:14.5px;transition:.3s;cursor:pointer;border:none}
+.btn-amber{background:var(--amber);color:#fff;box-shadow:0 10px 24px rgba(232,163,61,.4)}
+.btn-amber:hover{transform:translateY(-3px);box-shadow:0 16px 32px rgba(232,163,61,.5)}
+.btn-outline{border:1.5px solid rgba(255,255,255,.75);color:#fff}
+.btn-outline:hover{background:rgba(255,255,255,.14)}
+.btn-green{background:var(--green);color:#fff}
+.btn-green:hover{background:var(--green-dark);transform:translateY(-3px)}
+.btn-nav{padding:11px 26px}
+.hamburger{display:none;background:none;border:none;cursor:pointer;z-index:1002}
+.hamburger span{display:block;width:26px;height:2.5px;background:#fff;margin:6px 0;transition:.3s;border-radius:2px}
+header.scrolled .hamburger span{background:var(--ink)}
+.hamburger.open span:nth-child(1){transform:translateY(8.5px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-8.5px) rotate(-45deg)}
+
+/* ---------- HERO ---------- */
+.hero{min-height:100vh;display:flex;align-items:center;background:linear-gradient(105deg,rgba(6,46,32,.92) 0%,rgba(9,61,43,.78) 45%,rgba(9,61,43,.45) 100%),url('img/hero.jpg') center/cover no-repeat;color:#fff;padding:140px 0 90px}
+.hero-content{max-width:720px}
+.kicker{display:inline-flex;align-items:center;gap:14px;color:var(--gold);letter-spacing:5px;font-size:13px;font-weight:500;text-transform:uppercase;margin-bottom:26px}
+.kicker::before{content:"";width:44px;height:1.5px;background:var(--gold)}
+.hero h1{font-size:clamp(40px,6vw,76px);line-height:1.08;font-weight:600;margin-bottom:26px}
+.hero h1 em{color:var(--gold);font-style:italic}
+.hero p{font-size:clamp(16px,1.6vw,19px);font-weight:300;color:rgba(255,255,255,.85);max-width:560px;margin-bottom:40px}
+.hero-ctas{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:60px}
+.hero-stats{display:flex;gap:0;border-top:1px solid rgba(255,255,255,.2);padding-top:30px;flex-wrap:wrap}
+.stat{padding:0 42px;border-left:1px solid rgba(255,255,255,.18)}
+.stat:first-child{padding-left:0;border-left:none}
+.stat b{font-family:'Playfair Display',serif;font-size:38px;font-weight:600;color:var(--gold);display:block;line-height:1.1}
+.stat span{font-size:12.5px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.scroll-hint{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);width:26px;height:44px;border:2px solid rgba(255,255,255,.5);border-radius:20px;display:flex;justify-content:center;padding-top:8px}
+.scroll-hint::after{content:"";width:4px;height:9px;background:var(--gold);border-radius:4px;animation:drop 1.8s infinite}
+@keyframes drop{0%{transform:translateY(0);opacity:1}70%{transform:translateY(14px);opacity:0}100%{opacity:0}}
+
+/* ---------- MARQUEE ---------- */
+.marquee{background:var(--green);color:#fff;overflow:hidden;padding:20px 0;border-top:3px solid var(--gold)}
+.marquee-track{display:flex;gap:56px;width:max-content;animation:scroll 32s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-track span{display:flex;align-items:center;gap:12px;font-size:14px;letter-spacing:2.5px;font-weight:500;white-space:nowrap}
+.marquee-track i{font-style:normal;font-size:18px}
+.marquee-track b{color:var(--gold);font-weight:600}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* ---------- SECTION HEADERS ---------- */
+.sec{padding:110px 0}
+.sec-head{text-align:center;max-width:680px;margin:0 auto 64px}
+.sec-head.left{text-align:left;margin:0 0 48px}
+.eyebrow{color:var(--gold);letter-spacing:5px;font-size:12.5px;font-weight:600;text-transform:uppercase;display:block;margin-bottom:14px}
+.sec-head h2{font-size:clamp(32px,4vw,50px);font-weight:600;color:var(--green-dark);line-height:1.15}
+.sec-head h2.light{color:#fff}
+.sec-head p{color:var(--muted);margin-top:18px;font-size:16px;font-weight:300}
+.gold-line{width:70px;height:3px;background:var(--gold);margin:22px auto 0;border-radius:3px}
+.sec-head.left .gold-line{margin-left:0}
+
+/* ---------- CATALOG ---------- */
+.catalog{background:var(--bg)}
+.filters{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:52px}
+.filter-btn{padding:11px 26px;border-radius:100px;border:1.5px solid #d8ddd6;background:#fff;font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:500;color:var(--muted);cursor:pointer;transition:.28s}
+.filter-btn:hover{border-color:var(--green);color:var(--green)}
+.filter-btn.active{background:var(--green);border-color:var(--green);color:#fff;box-shadow:0 8px 20px rgba(13,92,63,.3)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 6px 20px rgba(9,61,43,.06);transition:.35s;animation:fadeIn .45s ease both}
+.card:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+.card.hide{display:none}
+.card-img{height:210px;background:#f2f2ee;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.card:hover .card-img img{transform:scale(1.07)}
+.card-body{padding:20px 22px 24px}
+.card-tag{font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:600}
+.card h3{font-size:20px;font-weight:600;color:var(--green-dark);margin:6px 0 14px}
+.card-cotizar{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--green);letter-spacing:1px;transition:.25s}
+.card-cotizar:hover{gap:13px;color:var(--gold)}
+@keyframes fadeIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+
+/* ---------- LIOFILIZADOS ---------- */
+.lyo{background:var(--dark);color:#fff;overflow:hidden}
+.lyo::before{content:"";position:absolute;top:-120px;right:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(217,164,65,.16),transparent 65%)}
+.lyo-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:70px;align-items:center}
+.lyo .sec-head{margin-bottom:0;text-align:left}
+.lyo h2{color:#fff}
+.lyo p{color:rgba(255,255,255,.72);font-weight:300;margin:22px 0 30px}
+.lyo p b{color:var(--gold);font-weight:600}
+.lyo-img{border-radius:24px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.5);transform:rotate(2deg)}
+.lyo-img img{width:100%;height:100%;object-fit:cover}
+.flavors{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px}
+.flavor{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:16px 12px;text-align:center;transition:.3s}
+.flavor:hover{background:rgba(217,164,65,.14);border-color:rgba(217,164,65,.5);transform:translateY(-4px)}
+.flavor .emoji{font-size:30px;display:block;margin-bottom:8px}
+.flavor span{font-size:12.5px;letter-spacing:.8px;font-weight:500}
+
+/* ---------- PELLETS ---------- */
+.pellets-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.check-list{list-style:none;margin-top:28px}
+.check-list li{display:flex;align-items:center;gap:16px;padding:13px 0;font-size:15.5px;border-bottom:1px dashed #e2e6e0}
+.check-list li:last-child{border-bottom:none}
+.check-ico{width:30px;height:30px;min-width:30px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-size:14px}
+.pellets-img{position:relative}
+.pellets-img img{border-radius:24px;box-shadow:var(--shadow)}
+.pellets-img::before{content:"";position:absolute;inset:-18px auto auto -18px;width:130px;height:130px;border-radius:24px;background:var(--gold);opacity:.18;z-index:-1}
+.pellets-badge{position:absolute;bottom:-22px;right:26px;background:var(--green);color:#fff;border-radius:16px;padding:16px 24px;box-shadow:0 16px 34px rgba(9,61,43,.35);text-align:center}
+.pellets-badge b{font-family:'Playfair Display',serif;font-size:26px;display:block;color:var(--gold)}
+
+/* ---------- ABOUT ---------- */
+.about{background:var(--bg)}
+.about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:70px;align-items:center}
+.about h2{font-size:clamp(30px,3.6vw,44px);color:var(--green-dark);font-weight:600;line-height:1.18;margin-bottom:24px}
+.about p{color:var(--muted);font-weight:300;margin-bottom:18px;font-size:15.5px}
+.about-imgs{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.about-imgs img{border-radius:18px;box-shadow:var(--shadow);height:230px;width:100%;object-fit:cover}
+.about-imgs img:first-child{grid-column:1/-1;height:280px}
+.values{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+.value-chip{background:#fff;border-radius:14px;padding:14px 20px;box-shadow:0 6px 18px rgba(9,61,43,.07);font-size:13px;font-weight:500;display:flex;align-items:center;gap:10px}
+.value-chip i{color:var(--gold);font-style:normal}
+
+/* ---------- MISION / VISION ---------- */
+.mv-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.mv-card{border-radius:24px;padding:56px 46px;color:#fff;position:relative;overflow:hidden;transition:.35s}
+.mv-card:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+.mv-card.mision{background:linear-gradient(140deg,var(--green),var(--green-deep))}
+.mv-card.vision{background:linear-gradient(140deg,#182338,var(--dark))}
+.mv-card::after{content:"”";position:absolute;top:-30px;right:24px;font-family:'Playfair Display',serif;font-size:200px;color:rgba(255,255,255,.07);line-height:1}
+.mv-card .eyebrow{margin-bottom:10px}
+.mv-card h3{font-size:34px;font-weight:600;margin-bottom:20px;color:var(--gold)}
+.mv-card p{font-style:italic;font-weight:300;color:rgba(255,255,255,.88);font-size:16.5px;line-height:1.9}
+
+/* ---------- TESTIMONIOS ---------- */
+.testi{background:var(--bg)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.testi-card{background:#fff;border-radius:20px;padding:36px 30px;box-shadow:0 6px 20px rgba(9,61,43,.06);position:relative;transition:.3s}
+.testi-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.testi-card::before{content:"★★★★★";color:var(--gold);letter-spacing:4px;font-size:15px;display:block;margin-bottom:18px}
+.testi-card p{font-size:14.5px;font-weight:300;color:var(--ink);font-style:italic;margin-bottom:24px}
+.testi-who{display:flex;align-items:center;gap:14px}
+.testi-ava{width:46px;height:46px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-family:'Playfair Display',serif;font-weight:700}
+.testi-who b{display:block;font-size:14.5px;color:var(--green-dark)}
+.testi-who span{font-size:12px;color:var(--muted)}
+
+/* ---------- CONTACT ---------- */
+.contact-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:60px;align-items:start}
+.contact-info h2{font-size:clamp(30px,3.4vw,42px);color:var(--green-dark);font-weight:600;line-height:1.2;margin-bottom:20px}
+.contact-info>p{color:var(--muted);font-weight:300;margin-bottom:34px}
+.ci-item{display:flex;gap:18px;padding:18px 0;border-bottom:1px solid #e8ece5}
+.ci-item:last-child{border-bottom:none}
+.ci-ico{width:48px;height:48px;min-width:48px;border-radius:14px;background:rgba(13,92,63,.09);display:grid;place-items:center;font-size:20px}
+.ci-item b{display:block;font-size:15px;color:var(--green-dark)}
+.ci-item span{font-size:14px;color:var(--muted)}
+.form-card{background:#fff;border-radius:24px;box-shadow:var(--shadow);padding:44px 40px;border-top:5px solid var(--gold)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.form-group{margin-bottom:18px}
+.form-group label{display:block;font-size:12.5px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--green-dark);margin-bottom:8px}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:14px 16px;border:1.5px solid #e0e5de;border-radius:12px;font-family:'Poppins',sans-serif;font-size:14px;color:var(--ink);transition:.25s;background:#fbfbf9}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 4px rgba(13,92,63,.09)}
+.form-note{font-size:12px;color:var(--muted);margin-top:14px;text-align:center}
+
+/* ---------- FOOTER ---------- */
+footer{background:var(--dark);color:#fff;padding:80px 0 0}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:44px;padding-bottom:60px}
+.foot-grid p{color:rgba(255,255,255,.6);font-size:14px;font-weight:300;margin-top:18px;max-width:300px}
+.foot-grid h4{font-family:'Poppins',sans-serif;font-size:15px;font-weight:600;letter-spacing:1px;margin-bottom:20px;color:var(--gold)}
+.foot-grid ul{list-style:none}
+.foot-grid li{margin-bottom:12px}
+.foot-grid ul a{color:rgba(255,255,255,.65);font-size:14px;transition:.25s}
+.foot-grid ul a:hover{color:var(--gold);padding-left:5px}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding:24px 0;text-align:center;font-size:13px;color:rgba(255,255,255,.45)}
+
+/* ---------- WHATSAPP FLOAT ---------- */
+.wa-float{position:fixed;bottom:26px;right:26px;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 28px rgba(37,211,102,.45);z-index:900;transition:.3s;animation:pulse 2.4s infinite}
+.wa-float:hover{transform:scale(1.1)}
+.wa-float svg{width:32px;height:32px;fill:#fff}
+@keyframes pulse{0%{box-shadow:0 10px 28px rgba(37,211,102,.45),0 0 0 0 rgba(37,211,102,.4)}70%{box-shadow:0 10px 28px rgba(37,211,102,.45),0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 10px 28px rgba(37,211,102,.45),0 0 0 0 rgba(37,211,102,0)}}
+
+/* ---------- REVEAL ---------- */
+.reveal{opacity:0;transform:translateY(36px);transition:.8s cubic-bezier(.2,.7,.3,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:1020px){
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .lyo-grid,.pellets-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:48px}
+  .mv-grid{grid-template-columns:1fr}
+  .testi-grid{grid-template-columns:1fr 1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:860px){
+  nav.main{position:fixed;inset:0;background:rgba(9,61,43,.98);backdrop-filter:blur(10px);flex-direction:column;justify-content:center;gap:34px;transform:translateX(100%);transition:.4s;z-index:1001}
+  nav.main.open{transform:translateX(0)}
+  nav.main a{font-size:22px;color:#fff!important}
+  .hamburger{display:block}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .hero-stats{gap:22px}
+  .stat{padding:0 24px}
+  .sec{padding:80px 0}
+}
+@media(max-width:560px){
+  .grid{grid-template-columns:1fr 1fr;gap:14px}
+  .card-img{height:150px}
+  .card-body{padding:14px 16px 18px}
+  .card h3{font-size:16px}
+  .form-row{grid-template-columns:1fr}
+  .testi-grid{grid-template-columns:1fr}
+  .flavors{grid-template-columns:1fr 1fr}
+  .hero-ctas .btn{width:100%;justify-content:center}
+  .stat b{font-size:28px}
+  .mv-card{padding:40px 28px}
+}
+.flavor img{width:100%;aspect-ratio:1/1;object-fit:cover;background:#fff;border-radius:12px;margin-bottom:10px}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header id="header">
+  <div class="container nav-wrap">
+    <a href="#inicio" class="logo">
+      <div class="logo-mark"><img src="img/logo.png" alt="Logo JOLS S.A.S."></div>
+      <div class="logo-text">JOLS<small>Exportadora · Ecuador</small></div>
+    </a>
+    <nav class="main" id="nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#nosotros">Sobre Nosotros</a>
+      <a href="#mision">Misión y Visión</a>
+      <a href="#contacto" class="btn btn-green btn-nav">Contacto</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio">
+  <div class="container">
+    <div class="hero-content">
+      <span class="kicker">Ecuador al Mundo</span>
+      <h1>Calidad <em>Premium</em> para Mercados Internacionales</h1>
+      <p>Exportamos los mejores productos del campo y del mar ecuatoriano a más de 30 países, cumpliendo los más altos estándares internacionales de calidad, sostenibilidad y trazabilidad.</p>
+      <div class="hero-ctas">
+        <a href="#productos" class="btn btn-amber">Ver Catálogo <span>→</span></a>
+        <a href="#contacto" class="btn btn-outline">Solicitar Cotización</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b data-count="30">0</b><span>Países destino</span></div>
+        <div class="stat"><b data-count="20" data-suffix="+">0</b><span>Productos de exportación</span></div>
+        <div class="stat"><b data-count="98" data-suffix="%">0</b><span>Nutrientes conservados</span></div>
+      </div>
+    </div>
+  </div>
+  <a href="#productos" class="scroll-hint" aria-label="Bajar"></a>
+</section>
+
+<!-- ============ MARQUEE PAISES ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="marquee">
+    <span><i>🇦🇺</i> AUSTRALIA <b>·</b></span>
+    <span><i>🇸🇬</i> SINGAPUR <b>·</b></span>
+    <span><i>🇦🇪</i> EMIRATOS ÁRABES <b>·</b></span>
+    <span><i>🇨🇱</i> CHILE <b>·</b></span>
+    <span><i>🇧🇷</i> BRASIL <b>·</b></span>
+    <span><i>🇺🇸</i> ESTADOS UNIDOS <b>·</b></span>
+    <span><i>🇩🇪</i> ALEMANIA <b>·</b></span>
+    <span><i>🇳🇱</i> PAÍSES BAJOS <b>·</b></span>
+    <span><i>🇪🇸</i> ESPAÑA <b>·</b></span>
+    <span><i>🇨🇳</i> CHINA <b>·</b></span>
+    <span><i>🇯🇵</i> JAPÓN <b>·</b></span>
+    <span><i>🇰🇷</i> COREA DEL SUR <b>·</b></span>
+  </div>
+</div>
+
+<!-- ============ CATALOGO ============ -->
+<section class="sec catalog" id="productos">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Nuestro Portafolio</span>
+      <h2>Productos de Exportación</h2>
+      <p>Frutas exóticas, tubérculos andinos, mariscos del Pacífico y más — cosechados y seleccionados bajo estrictos controles de calidad.</p>
+      <div class="gold-line"></div>
+    </div>
+
+    <div class="filters reveal">
+      <button class="filter-btn active" data-filter="all">Todos</button>
+      <button class="filter-btn" data-filter="frutas">Frutas</button>
+      <button class="filter-btn" data-filter="tuberculos">Tubérculos y Raíces</button>
+      <button class="filter-btn" data-filter="cacao">Cacao</button>
+      <button class="filter-btn" data-filter="mariscos">Mariscos</button>
+    </div>
+
+    <div class="grid" id="productGrid">
+      <!-- FRUTAS -->
+      <article class="card reveal" data-cat="frutas">
+        <div class="card-img"><img src="img/banano.jpg" alt="Banano Cavendish" loading="lazy"></div>
+        <div class="card-body"><span class="card-tag">Frutas</span><h3>Banano Cavendish</h3><a class="card-cotizar" href="https://wa.me/593998565513?text=Hola%20JOLS%2C%20me%20interesa%20cotizar%20Banano%20Cavendish" target="_blank">COTIZAR →</a></div>
+      </article>
+      <article class="card reveal" data-cat="frutas">
+        <div class="card-img"><img src="img/pitahaya-roja.jpg" alt="Pitahaya Roja" loading="lazy"></div>
+        <div class="card-body"><span class="card-tag">Frutas</span><h3>Pitahaya Roja</h3><a class="card-cotizar" href="https://wa.me/593998565513?text=Hola%20JOLS%2C%20me%20interesa%20cotizar%20Pitahaya%20Roja" target="_blank">COTIZAR →</a></div>
+      </article>
+      <article class="card reveal" data-cat="frutas">
+        <div class="card-img"><img src="img/aguacate.jpg" alt="Aguacate Hass" loading="lazy"></div>
+        <div class="card-body"><span class="card-tag">Frutas</span><h3>Aguacate Hass</h3><a class="card-cotizar" href="https://wa.me/593998565513?text=Hola%20JOLS%2C%20me%20interesa%20cotizar%20Aguacate%20Hass" target="_blank">COTIZAR →</a></div>
+      </article>
+      <article class="card reveal" data-cat="frutas">
+        <div class="card-img"><img src="img/maracuya.jpg" alt="Maracuyá" loading="lazy"></div>
+        <div class="card-body"><span class="card-tag">Frutas</span><h3>Maracuyá</h3><a class="card-cotizar" href="https://wa.me/593998565513?text=Hola%20JOLS%2C%20me%20interesa%20cotizar%20Maracuy%C3%A1" target="_blank">COTIZAR →</a></div>
+      </article>
+      <article class="card reveal" data-cat="frutas">
+        <div class="card-img"><img src="img/pitahaya-amarilla.jpg" alt="Pitahaya Amarilla" loading="lazy"></div>
+        <div class="card-body"><span class="card-tag">Frutas</span><h3>Pitahaya Amarilla</h3><a class="card-cotizar" href="https://wa.me/593998565513?text=Hola%20JOLS%2C%20me%20interesa%20cotizar%20Pitahaya%20Amarilla" target="_blank">COTIZAR →</a></div>
+      </article>
+      <article class="card reveal" data-cat="frutas">
+        <div class="card-img"><img src="img/arandanos.jpg" alt="Arándanos" loading="lazy"></div>
+        <div class="card-body"><span class="card-tag">Frutas</span><h3>Arándanos</h3><a class="card-cotizar" href="https://wa.me/593998565513?text=Hola%20JOLS%2C%20me%20interesa%20cotizar%20Ar%C3%A1ndanos" target="_blank">COTIZAR →</a></div>
+      </article>
+      <article class="card reveal" data-cat="frutas">
+        <div class="card-img"><img src="img/platano.jpg" alt="Plátano Verde" loading="lazy"></div>
+        <div class="card-body"><span class="card-tag">Frutas</span><h3>Plátano Verde</h3><a class="card-cotizar" href="https://wa.me/593998565513?text=Hola%20JOLS%2C%20me%20interesa%20cotizar%20Pl%C3%A1tano%20Verde" target="_blank">COTIZAR →</a></div>
+      </article>
+      <article class="card reveal" data-cat="frutas">
+        <div class="card-img"><img src="img/limon.jpg" alt="Limón Sutil" loading="lazy"></div>
+        <div class="card-body"><span class="card-tag">Frutas</span><h3>Limón Sutil</h3><a class="card-cotizar" href="https://wa.me/593998565513?text=Hola%20JOLS%2C%20me%20interesa%20cotizar%20Lim%C3%B3n%20Sutil" target="_blank">COTIZAR →</a></div>
+      </article>
+      <article class="card reveal" data-cat="frutas">
+        <div class="card-img"><img src="img/mango.jpg" alt="Mango" loading="lazy"></div>
+        <div class="card-body"><span class="card-tag">Frutas</span><h3>Mango Kent / Tommy</h3><a class="card-cotizar" href="https://wa.me/593998565513?text=Hola%20JOLS%2C%20me%20interesa%20cotizar%20Mango" target="_blank">COTIZAR →</a></div>
+      </article>
+      <article class="card reveal" data-cat="frutas">
+        <div class="card-img"><img src="img/granadilla.jpg" alt="Granadilla" loading="lazy"></div>
+        <div class="card-body"><span class="card-tag">Frutas</span><h3>Granadilla</h3><a class="card-cotizar" href="https://wa.me/593998565513?text=Hola%20JOLS%2C%20me%20interesa%20cotizar%20Granadilla" target="_blank">COTIZAR →</a></div>
+      </article>
+      <article class="card reveal" data-cat="frutas">
+        <div class="card-img"><img src="img/papaya.jpg" alt="Papaya" loading="lazy"></div>
+        <div class="card-body"><span class="card-tag">Frutas</span><h3>Papaya</h3><a class="card-cotizar" href="https://wa.me/593998565513?text=Hola%20JOLS%2C%20me%20interesa%20cotizar%20Papaya" target="_blank">COTIZAR →</a></div>
+      </article>
+      <article class="card reveal" data-cat="frutas">
+        <div class="card-img"><img src="img/pepino.jpg" alt="Pepino Dulce" loading="lazy"></div>
+        <div class="card-body"><span class="card-tag">Frutas</span><h3>Pepino Dulce</h3><a class="card-cotizar" href="https://wa.me/593998565513?text=Hola%20JOLS%2C%20me%20interesa%20cotizar%20Pepino%20Dulce" target="_blank">COTIZAR →</a></div>
+      </article>
+      <article class="card reveal" data-cat="frutas">
+        <div class="card-img"><img src="img/tomate-arbol.jpg" alt="Tomate de Árbol" loading="lazy"></div>
+        <div class="card-body"><span class="card-tag">Frutas</span><h3>Tomate de Árbol</h3><a class="card-cotizar" href="https://wa.me/593998565513?text=Hola%20JOLS%2C%20me%20interesa%20cotizar%20Tomate%20de%20%C3%81rbol" target="_blank">COTIZAR →</a></div>
+      </article>
+      <article class="card reveal" data-cat="frutas">
+        <div class="card-img"><img src="img/uvilla.jpg" alt="Uvilla (Physalis)" loading="lazy"></div>
+        <div class="card-body"><span class="card-tag">Frutas</span><h3>Uvilla (Physalis)</h3><a class="card-cotizar" href="https://wa.me/593998565513?text=Hola%20JOLS%2C%20me%20interesa%20cotizar%20Uvilla" target="_blank">COTIZAR →</a></div>
+      </article>
+      <article class="card reveal" data-cat="frutas">
+        <div class="card-img"><img src="img/gulupa.jpg" alt="Gulupa" loading="lazy"></div>
+        <div class="card-body"><span class="card-tag">Frutas</span><h3>Gulupa</h3><a class="card-cotizar" href="https://wa.me/593998565513?text=Hola%20JOLS%2C%20me%20interesa%20cotizar%20Gulupa" target="_blank">COTIZAR →</a></div>
+      </article>
+      <article class="card reveal" data-cat="frutas">
+        <div class="card-img"><img src="img/guanabana.jpg" alt="Guanábana" loading="lazy"></div>
+        <div class="card-body"><span class="card-tag">Frutas</span><h3>Guanábana</h3><a class="card-cotizar" href="https://wa.me/593998565513?text=Hola%20JOLS%2C%20me%20interesa%20cotizar%20Guan%C3%A1bana" target="_blank">COTIZAR →</a></div>
+      </article>
+      <article class="card reveal" data-cat="frutas">
+        <div class="card-img"><img src="img/lulo.jpg" alt="Lulo / Naranjilla" loading="lazy"></div>
+        <div class="card-body"><span class="card-tag">Frutas</span><h3>Lulo / Naranjilla</h3><a class="card-cotizar" href="https://wa.me/593998565513?text=Hola%20JOLS%2C%20me%20interesa%20cotizar%20Lulo" target="_blank">COTIZAR →</a></div>
+      </article>
+      <article class="card reveal" data-cat="frutas">
+        <div class="card-img"><img src="img/taxo.jpg" alt="Taxo" loading="lazy"></div>
+        <div class="card-body"><span class="card-tag">Frutas</span><h3>Taxo</h3><a class="card-cotizar" href="https://wa.me/593998565513?text=Hola%20JOLS%2C%20me%20interesa%20cotizar%20Taxo" target="_blank">COTIZAR →</a></div>
+      </article>
+      <article class="card reveal" data-cat="frutas">
+        <div class="card-img"><img src="img/mangostino.jpg" alt="Mangostán" loading="lazy"></div>
+        <div class="card-body"><span class="card-tag">Frutas</span><h3>Mangostán</h3><a class="card-cotizar" href="https://wa.me/593998565513?text=Hola%20JOLS%2C%20me%20interesa%20cotizar%20Mangost%C3%A1n" target="_blank">COTIZAR →</a></div>
+      </article>
+      <article class="card reveal" data-cat="frutas">
+        <div class="card-img"><img src="img/pina.jpg" alt="Piña Golden" loading="lazy"></div>
+        <div class="card-body"><span class="card-tag">Frutas</span><h3>Piña Golden</h3><a class="card-cotizar" href="https://wa.me/593998565513?text=Hola%20JOLS%2C%20me%20interesa%20cotizar%20Pi%C3%B1a%20Golden" target="_blank">COTIZAR →</a></div>
+      </article>
+      <!-- TUBERCULOS -->
+      <article class="card reveal" data-cat="tuberculos">
+        <div class="card-img"><img src="img/yuca.jpg" alt="Yuca" loading="lazy"></div>
+        <div class="card-body"><span class="card-tag">Tubérculos</span><h3>Yuca / Cassava</h3><a class="card-cotizar" href="https://wa.me/593998565513?text=Hola%20JOLS%2C%20me%20interesa%20cotizar%20Yuca" target="_blank">COTIZAR →</a></div>
+      </article>
+      <article class="card reveal" data-cat="tuberculos">
+        <div class="card-img"><img src="img/malanga.jpg" alt="Malanga" loading="lazy"></div>
+        <div class="card-body"><span class="card-tag">Tubérculos</span><h3>Malanga Blanca / Lila</h3><a class="card-cotizar" href="https://wa.me/593998565513?text=Hola%20JOLS%2C%20me%20interesa%20cotizar%20Malanga" target="_blank">COTIZAR →</a></div>
+      </article>
+      <article class="card reveal" data-cat="tuberculos">
+        <div class="card-img"><img src="img/papa-china.jpg" alt="Papa China / Taro" loading="lazy"></div>
+        <div class="card-body"><span class="card-tag">Tubérculos</span><h3>Papa China / Taro</h3><a class="card-cotizar" href="https://wa.me/593998565513?text=Hola%20JOLS%2C%20me%20interesa%20cotizar%20Papa%20China" target="_blank">COTIZAR →</a></div>
+      </article>
+      <article class="card reveal" data-cat="tuberculos">
+        <div class="card-img"><img src="img/jengibre.jpg" alt="Jengibre Fresco" loading="lazy"></div>
+        <div class="card-body"><span class="card-tag">Tubérculos</span><h3>Jengibre Fresco</h3><a class="card-cotizar" href="https://wa.me/593998565513?text=Hola%20JOLS%2C%20me%20interesa%20cotizar%20Jengibre" target="_blank">COTIZAR →</a></div>
+      </article>
+      <article class="card reveal" data-cat="tuberculos">
+        <div class="card-img"><img src="img/ajo.jpg" alt="Ajo" loading="lazy"></div>
+        <div class="card-body"><span class="card-tag">Tubérculos</span><h3>Ajo</h3><a class="card-cotizar" href="https://wa.me/593998565513?text=Hola%20JOLS%2C%20me%20interesa%20cotizar%20Ajo" target="_blank">COTIZAR →</a></div>
+      </article>
+      <article class="card reveal" data-cat="tuberculos">
+        <div class="card-img"><img src="img/curcuma.jpg" alt="Cúrcuma Fresca" loading="lazy"></div>
+        <div class="card-body"><span class="card-tag">Tubérculos</span><h3>Cúrcuma Fresca</h3><a class="card-cotizar" href="https://wa.me/593998565513?text=Hola%20JOLS%2C%20me%20interesa%20cotizar%20C%C3%BArcuma" target="_blank">COTIZAR →</a></div>
+      </article>
+      <!-- CACAO -->
+      <article class="card reveal" data-cat="cacao">
+        <div class="card-img"><img src="img/cacao.jpg" alt="Cacao Fino de Aroma y CCN-51" loading="lazy"></div>
+        <div class="card-body"><span class="card-tag">Cacao</span><h3>Cacao Fino de Aroma y CCN-51</h3><a class="card-cotizar" href="https://wa.me/593998565513?text=Hola%20JOLS%2C%20me%20interesa%20cotizar%20Cacao" target="_blank">COTIZAR →</a></div>
+      </article>
+      <!-- MARISCOS -->
+      <article class="card reveal" data-cat="mariscos">
+        <div class="card-img"><img src="img/mariscos.jpg" alt="Mariscos" loading="lazy"></div>
+        <div class="card-body"><span class="card-tag">Mariscos</span><h3>Mariscos del Pacífico</h3><a class="card-cotizar" href="https://wa.me/593998565513?text=Hola%20JOLS%2C%20me%20interesa%20cotizar%20Mariscos" target="_blank">COTIZAR →</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LIOFILIZADOS ============ -->
+<section class="sec lyo" id="liofilizados">
+  <div class="container lyo-grid">
+    <div class="reveal">
+      <span class="eyebrow">Innovación y Calidad</span>
+      <h2 class="serif" style="font-size:clamp(30px,3.6vw,46px);line-height:1.15">Productos <em style="color:var(--gold);font-style:italic">Liofilizados</em></h2>
+      <p>Frutas ecuatorianas procesadas mediante liofilización al vacío. Conservan el <b>98% de sus nutrientes</b>, sabor y color original. Sin conservantes, sin azúcar añadida.</p>
+      <div class="flavors">
+        <div class="flavor"><img src="img/lyo-fresa.jpg" alt="Fresa liofilizada JOLS" loading="lazy"><span>Fresa</span></div>
+        <div class="flavor"><img src="img/lyo-mango.jpg" alt="Mango liofilizada JOLS" loading="lazy"><span>Mango</span></div>
+        <div class="flavor"><img src="img/lyo-uvilla.jpg" alt="Uvilla liofilizada JOLS" loading="lazy"><span>Uvilla</span></div>
+        <div class="flavor"><img src="img/lyo-pina.jpg" alt="Piña liofilizada JOLS" loading="lazy"><span>Piña</span></div>
+        <div class="flavor"><img src="img/lyo-banano.jpg" alt="Banano liofilizada JOLS" loading="lazy"><span>Banano</span></div>
+        <div class="flavor"><img src="img/lyo-tamarindo.jpg" alt="Tamarindo liofilizada JOLS" loading="lazy"><span>Tamarindo</span></div>
+      </div>
+    </div>
+    <div class="lyo-img reveal"><img src="img/liofilizados.jpg" alt="Productos liofilizados JOLS"></div>
+  </div>
+</section>
+
+<!-- ============ PELLETS ============ -->
+<section class="sec" id="pellets">
+  <div class="container pellets-grid">
+    <div class="reveal">
+      <span class="eyebrow">Biomasa y Energía Renovable</span>
+      <h2 class="serif" style="font-size:clamp(30px,3.6vw,46px);color:var(--green-dark);line-height:1.15">Pellets de Madera</h2>
+      <div class="gold-line" style="margin:20px 0 24px"></div>
+      <p style="color:var(--muted);font-weight:300">Comercializamos pellets de madera de alta calidad para calefacción, calderas industriales y generación de energía con biomasa. Un combustible renovable, de alto poder calorífico y baja humedad, con trazabilidad del origen de la materia prima y despacho para mercados exigentes.</p>
+      <ul class="check-list">
+        <li><span class="check-ico">✓</span>Alto poder calorífico y bajo contenido de cenizas</li>
+        <li><span class="check-ico">✓</span>Trazabilidad completa del proceso</li>
+        <li><span class="check-ico">✓</span>Despacho marítimo en contenedor</li>
+        <li><span class="check-ico">✓</span>Sacos de 15 kg o despacho a granel, según requerimiento</li>
+      </ul>
+    </div>
+    <div class="pellets-img reveal">
+      <img src="img/pellets.jpg" alt="Pellets de madera">
+      <div class="pellets-badge"><b>100%</b>Trazable</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOBRE NOSOTROS ============ -->
+<section class="sec about" id="nosotros">
+  <div class="container about-grid">
+    <div class="reveal">
+      <span class="eyebrow">Quiénes Somos</span>
+      <h2>Del campo ecuatoriano a su puerto, con un solo interlocutor</h2>
+      <div class="gold-line" style="margin:0 0 26px"></div>
+      <p>JOLS nació en Quito en 2023 con una idea sencilla: que un importador no tenga que conocer cada finca del Ecuador para recibir lo mejor de ellas. No somos productores; somos quienes <strong>eligen</strong>. Recorremos fincas, empacadoras y plantas certificadas, y seleccionamos a quién comprarle con la misma exigencia con la que usted elegiría a su proveedor.</p>
+      <p>A partir de ahí respondemos por todo el recorrido: selección en campo, control de calidad, empaque, documentación fitosanitaria ante Agrocalidad y logística en contenedor refrigerado o carga aérea, bajo términos FOB o CIF. Usted habla con una sola persona que conoce el campo y conoce su mercado.</p>
+      <p>Trabajamos desde un pallet por avión o un contenedor por barco, y crecemos al ritmo de cada cliente. Preferimos una relación de años a una venta de una sola vez.</p>
+      <div class="values">
+        <div class="value-chip"><i>◆</i> Un solo interlocutor</div>
+        <div class="value-chip"><i>◆</i> De la finca al puerto</div>
+        <div class="value-chip"><i>◆</i> Trazabilidad por lote</div>
+      </div>
+    </div>
+    <div class="about-imgs reveal">
+      <img src="img/plant-banano.jpg" alt="Plantación de banano">
+      <img src="img/plant-cacao.jpg" alt="Mazorcas de cacao en el árbol">
+      <img src="img/plant-pina.jpg" alt="Plantación de piña">
+    </div>
+  </div>
+</section>
+
+<!-- ============ MISION / VISION ============ -->
+<section class="sec" id="mision">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Hacia dónde vamos</span>
+      <h2>Misión y Visión</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="mv-grid">
+      <div class="mv-card mision reveal">
+        <span class="eyebrow">Nuestra Misión</span>
+        <h3 class="serif">Misión</h3>
+        <p>Hacer que comprar en Ecuador sea simple y seguro: encontrar el producto correcto en el origen correcto y entregarlo documentado, a tiempo y tal como se acordó, con un trato justo para quien lo cultiva y para quien lo compra.</p>
+      </div>
+      <div class="mv-card vision reveal">
+        <span class="eyebrow">Visión de Futuro</span>
+        <h3 class="serif">Visión</h3>
+        <p>Ser el nombre que un importador de Europa o Estados Unidos recuerda cuando piensa en Ecuador: el socio que conoce cada origen, cumple cada embarque y convierte la diversidad del país en programas de suministro estables durante todo el año.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ============ CONTACTO ============ -->
+<section class="sec" id="contacto">
+  <div class="container contact-grid">
+    <div class="contact-info reveal">
+      <span class="eyebrow">Hablemos</span>
+      <h2>Solicita tu Cotización</h2>
+      <p>Cuéntanos qué producto te interesa y nuestro equipo comercial te responderá en menos de 24 horas con una propuesta adaptada a tu mercado.</p>
+      <div class="ci-item">
+        <div class="ci-ico">📍</div>
+        <div><b>Oficina</b><span>Edificio Iturrey, Bloque 2B, Piso E11-2, Barrio La Paz · Quito, Ecuador · Envíos mundiales</span></div>
+      </div>
+      <div class="ci-item">
+        <div class="ci-ico">✉️</div>
+        <div><b>Correo</b><span><a href="mailto:jols.export@gmail.com">jols.export@gmail.com</a></span></div>
+      </div>
+      <div class="ci-item">
+        <div class="ci-ico">💬</div>
+        <div><b>WhatsApp</b><span>+593 99 856 5513</span></div>
+      </div>
+      <div class="ci-item">
+        <div class="ci-ico">🕐</div>
+        <div><b>Horario</b><span>Lunes a Viernes · 8h30 – 18h00 (GMT-5)</span></div>
+      </div>
+    </div>
+    <div class="form-card reveal">
+      <form id="quoteForm">
+        <div class="form-row">
+          <div class="form-group"><label for="fname">Nombre completo *</label><input type="text" id="fname" required placeholder="Tu nombre"></div>
+          <div class="form-group"><label for="fcompany">Empresa</label><input type="text" id="fcompany" placeholder="Nombre de tu empresa"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label for="femail">Correo electrónico *</label><input type="email" id="femail" required placeholder="tu@email.com"></div>
+          <div class="form-group"><label for="fcountry">País destino</label><input type="text" id="fcountry" placeholder="Ej. Alemania"></div>
+        </div>
+        <div class="form-group">
+          <label for="fproduct">Producto de interés *</label>
+          <select id="fproduct" required>
+            <option value="">Selecciona un producto…</option>
+            <optgroup label="Frutas">
+              <option>Banano Cavendish</option><option>Pitahaya Roja</option><option>Aguacate Hass</option><option>Maracuyá</option>
+              <option>Pitahaya Amarilla</option><option>Arándanos</option><option>Plátano Verde</option>
+              <option>Limón Sutil</option><option>Mango</option>
+              <option>Granadilla</option><option>Papaya</option><option>Pepino Dulce</option><option>Tomate de Árbol</option><option>Uvilla</option><option>Gulupa</option><option>Guanábana</option><option>Lulo / Naranjilla</option><option>Taxo</option><option>Mangostán</option><option>Piña Golden</option>
+            </optgroup>
+            <optgroup label="Tubérculos y Raíces">
+              <option>Yuca / Cassava</option><option>Malanga</option><option>Papa China / Taro</option>
+              <option>Jengibre Fresco</option><option>Cúrcuma</option><option>Ajo</option>
+            </optgroup>
+            <optgroup label="Cacao">
+              <option>Cacao Fino de Aroma</option><option>Cacao CCN-51</option>
+            </optgroup>
+            <optgroup label="Otras líneas">
+              <option>Mariscos</option><option>Productos Liofilizados</option><option>Pellets de Madera</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="form-group"><label for="fmsg">Mensaje</label><textarea id="fmsg" rows="4" placeholder="Cantidades, frecuencia, puerto de destino…"></textarea></div>
+        <button type="submit" class="btn btn-amber" style="width:100%;justify-content:center">Enviar Solicitud →</button>
+        <p class="form-note">Al enviar se abrirá WhatsApp con tu solicitud lista para partir.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a href="#inicio" class="logo">
+          <div class="logo-mark"><img src="img/logo.png" alt="Logo JOLS S.A.S."></div>
+          <div class="logo-text" style="color:#fff">JOLS<small>Exportadora · Ecuador</small></div>
+        </a>
+        <p>Proyectamos la riqueza del campo y del mar ecuatoriano hacia más de 30 países, con calidad premium y comercio responsable.</p>
+      </div>
+      <div>
+        <h4>Productos</h4>
+        <ul>
+          <li><a href="#productos">Catálogo Completo</a></li>
+          <li><a href="#productos">Frutas y Vegetales</a></li>
+          <li><a href="#productos">Tubérculos y Raíces</a></li>
+          <li><a href="#liofilizados">Liofilizados</a></li>
+          <li><a href="#pellets">Pellets</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#nosotros">Sobre Nosotros</a></li>
+          <li><a href="#mision">Nuestra Misión</a></li>
+          <li><a href="#mision">Visión</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="#contacto">Ubícanos</a></li>
+          <li><a href="mailto:jols.export@gmail.com">jols.export@gmail.com</a></li>
+          <li><a href="https://www.facebook.com/Jols593" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.instagram.com/jols.ecuador" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.tiktok.com/@jols.sas" target="_blank" rel="noopener">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 JOLS S.A.S. · RUC 1793203122001 · Edificio Iturrey, Bloque 2B, Piso E11-2, Barrio La Paz, Quito, Ecuador. Todos los derechos reservados.<br><small style="opacity:.55">Fotos de plantaciones vía Wikimedia Commons: Brian Snelson (CC BY 2.0), Pkraemer (CC BY-SA 4.0), Theglennpalacio (CC BY-SA 4.0).</small></div>
+  </div>
+</footer>
+
+<!-- ============ WHATSAPP FLOTANTE ============ -->
+<a class="wa-float" href="https://wa.me/593998565513?text=Hola%20JOLS%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20productos%20de%20exportaci%C3%B3n" target="_blank" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4.5 28l6.3-1.7c1.9 1 4 1.6 6.2 1.6 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm0 21.7c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-3.7 1 1-3.6-.3-.4c-1.1-1.7-1.7-3.7-1.7-5.7 0-5.5 4.4-10 9.8-10s9.8 4.5 9.8 10-4.4 10.4-9.8 10.4zm5.4-7.8c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.5 0-.6l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.5 5.6 4.9.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
+</a>
+
+<script>
+/* ===== Header scroll ===== */
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 60));
+
+/* ===== Menú móvil ===== */
+const burger = document.getElementById('hamburger');
+const nav = document.getElementById('nav');
+burger.addEventListener('click', () => {
+  burger.classList.toggle('open');
+  nav.classList.toggle('open');
+});
+nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  burger.classList.remove('open');
+  nav.classList.remove('open');
+}));
+
+/* ===== Duplicar marquee para loop infinito ===== */
+const marquee = document.getElementById('marquee');
+marquee.innerHTML += marquee.innerHTML;
+
+/* ===== Filtros del catálogo ===== */
+const filterBtns = document.querySelectorAll('.filter-btn');
+const cards = document.querySelectorAll('#productGrid .card');
+filterBtns.forEach(btn => btn.addEventListener('click', () => {
+  filterBtns.forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const f = btn.dataset.filter;
+  cards.forEach(c => {
+    const show = f === 'all' || c.dataset.cat === f;
+    c.classList.toggle('hide', !show);
+    if (show) { c.style.animation = 'none'; void c.offsetWidth; c.style.animation = ''; }
+  });
+}));
+
+/* ===== Animación al hacer scroll ===== */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+/* ===== Contadores animados ===== */
+const counters = document.querySelectorAll('[data-count]');
+const counterObs = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    const target = +el.dataset.count;
+    const suffix = el.dataset.suffix || '';
+    const t0 = performance.now(), dur = 1600;
+    (function tick(t) {
+      const p = Math.min((t - t0) / dur, 1);
+      el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))) + (p === 1 ? suffix : '');
+      if (p < 1) requestAnimationFrame(tick);
+    })(t0);
+    counterObs.unobserve(el);
+  });
+}, { threshold: 0.5 });
+counters.forEach(c => counterObs.observe(c));
+
+/* ===== Formulario → WhatsApp ===== */
+document.getElementById('quoteForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const v = id => document.getElementById(id).value.trim();
+  const msg = encodeURIComponent(
+    `Hola JOLS, soy ${v('fname')}${v('fcompany') ? ' de ' + v('fcompany') : ''}.\n` +
+    `Correo: ${v('femail')}\n` +
+    `País destino: ${v('fcountry') || 'N/D'}\n` +
+    `Producto de interés: ${v('fproduct')}\n` +
+    (v('fmsg') ? `Mensaje: ${v('fmsg')}` : '')
+  );
+  window.open(`https://wa.me/593998565513?text=${msg}`, '_blank');
+});
+</script>
+</body>
+</html>
