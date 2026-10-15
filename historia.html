@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="logo.png">
+<title>Manguito Rumbo a Europa | JOLS SAS</title>
+<meta name="description" content="La historia de Manguito, un mango ecuatoriano que soñaba con ser exportado a Europa. Una producción de JOLS SAS.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#f2b23a;
+  --mango:#f07a2a;
+  --ink:#f3efe6;
+  --muted:rgba(243,239,230,.72);
+  --bar:8vh;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;background:#000;color:var(--ink)}
+body{font-family:'Poppins',sans-serif;overflow:hidden}
+.serif{font-family:'Playfair Display',serif}
+a{color:inherit}
+
+/* ---------- Escenario ---------- */
+.reel{position:fixed;inset:0;overflow-y:auto;scroll-snap-type:y mandatory;scroll-behavior:smooth;scrollbar-width:none}
+.reel::-webkit-scrollbar{display:none}
+.scene{position:relative;height:100vh;height:100dvh;scroll-snap-align:start;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;background:#000}
+
+/* Fondo desenfocado + ilustración vertical completa al centro */
+.scene .blur,.scene .art{position:absolute;background-repeat:no-repeat;opacity:0}
+.scene .blur{inset:-10%;background-size:cover;background-position:center;filter:blur(40px) brightness(.55) saturate(1.2);transition:opacity 1.6s ease}
+.scene .art{top:var(--bar);bottom:var(--bar);left:0;right:0;background-size:contain;background-position:center;
+  transform:scale(1.12) translate3d(var(--fx,0),var(--fy,0),0);
+  transition:opacity 1.4s ease, transform 11s cubic-bezier(.2,.6,.3,1)}
+.scene.wide .art{top:0;bottom:0;background-size:cover}
+.scene.on .blur{opacity:1}
+.scene.on .art{opacity:1;transform:scale(1) translate3d(0,0,0)}
+.scene .shade{position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(0,0,0,0) 55%,rgba(0,0,0,.8) 100%),
+             radial-gradient(ellipse at center,rgba(0,0,0,0) 60%,rgba(0,0,0,.5) 100%)}
+
+/* Texto de escena */
+.cap{position:relative;z-index:3;width:min(820px,100%);margin:0 auto calc(var(--bar) + 4vh);padding:0 16px;text-align:center}
+.cap .chapter{display:inline-block;font-size:clamp(11px,1.4vw,13px);letter-spacing:.42em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;
+  opacity:0;transform:translateY(10px);transition:all 1s ease .6s}
+.cap h2{font-family:'Playfair Display',serif;font-weight:500;font-size:clamp(22px,3.4vw,38px);line-height:1.2;
+  opacity:0;transform:translateY(16px);transition:all 1.2s ease 1s}
+.cap p{margin-top:12px;font-weight:300;font-size:clamp(14px,1.8vw,18px);max-width:600px;margin-inline:auto;
+  opacity:0;transition:opacity 1.2s ease 2s}
+.cap p.line{font-style:italic}
+.scene.on .cap .chapter,.scene.on .cap h2{opacity:1;transform:none}
+.scene.on .cap p{opacity:1}
+.sub{display:inline;background:rgba(0,0,0,.6);padding:.12em .5em;line-height:1.55;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+
+/* ---------- Pantallas de título ---------- */
+.card{align-items:center;text-align:center}
+.card .cap{margin:0 auto}
+.presents{font-size:clamp(11px,1.5vw,14px);letter-spacing:.5em;text-transform:uppercase;color:var(--muted);opacity:0;transition:opacity 1.6s ease .4s}
+.title{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(52px,12vw,140px);line-height:1;margin:18px 0 6px;
+  background:linear-gradient(180deg,#ffe08a 0%,var(--mango) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
+  opacity:0;letter-spacing:.3em;transition:opacity 2s ease 1.4s, letter-spacing 4s cubic-bezier(.2,.7,.2,1) 1.4s}
+.tagline{font-style:italic;font-family:'Playfair Display',serif;font-size:clamp(18px,2.8vw,28px);color:var(--muted);opacity:0;transition:opacity 1.6s ease 3.2s}
+.scene.on .presents,.scene.on .tagline{opacity:1}
+.scene.on .title{opacity:1;letter-spacing:.02em}
+.hint{margin-top:44px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:rgba(243,239,230,.45);opacity:0;transition:opacity 1s ease 4.5s}
+.scene.on .hint{opacity:1}
+.hint b{display:block;margin:12px auto 0;width:1px;height:38px;background:linear-gradient(var(--gold),transparent);animation:drip 2s infinite}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ---------- Mapa del viaje ---------- */
+.voyage{background:radial-gradient(ellipse at 50% 40%,#0b2a3a 0%,#03121b 70%,#000 100%)}
+.map{position:absolute;inset:var(--bar) 0;display:flex;align-items:center;justify-content:center;padding:0 16px 18vh}
+.map svg{width:min(760px,100%);height:auto;overflow:visible}
+.map .route{fill:none;stroke:var(--gold);stroke-width:2.5;stroke-dasharray:6 8;stroke-dashoffset:0}
+.map .mask{fill:none;stroke:#03121b;stroke-width:8;stroke-dasharray:1000;stroke-dashoffset:0;transition:stroke-dashoffset 5s ease-in-out .8s}
+.voyage.on .map .mask{stroke-dashoffset:1000}
+.map .pin{fill:var(--mango)}
+.map text{fill:var(--ink);font:500 15px Poppins,sans-serif;letter-spacing:.08em}
+.map .small{fill:var(--muted);font-size:11px;letter-spacing:.2em}
+.map .ship{opacity:0;transition:opacity .6s ease .8s}
+.voyage.on .map .ship{opacity:1}
+
+/* Créditos */
+.credits{justify-content:center;align-items:flex-start}
+.roll{position:relative;z-index:2;width:min(560px,100%);padding:0 16px;text-align:center;transform:translateY(100vh)}
+.scene.on .roll{animation:roll 34s linear forwards}
+@keyframes roll{to{transform:translateY(-100%)}}
+.roll h3{font-family:'Playfair Display',serif;font-weight:500;font-size:clamp(22px,3vw,30px);color:var(--gold);margin:52px 0 16px}
+.roll dl{display:grid;grid-template-columns:1fr 1fr;gap:6px 22px;font-size:14px}
+.roll dt{text-align:right;color:var(--muted);font-weight:300}
+.roll dd{text-align:left}
+.roll .end{margin:80px 0 40px}
+.roll .end img{width:84px;margin:0 auto 18px;display:block}
+.btn{display:inline-block;margin-top:22px;padding:13px 28px;border-radius:100px;background:var(--gold);color:#1c1406;font-weight:500;text-decoration:none;font-size:14px}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid rgba(243,239,230,.4);margin-left:8px}
+
+/* ---------- Capa de cine ---------- */
+.bars:before,.bars:after{content:"";position:fixed;left:0;right:0;height:var(--bar);background:#000;z-index:20;pointer-events:none}
+.bars:before{top:0}.bars:after{bottom:0}
+.grain{position:fixed;inset:-50%;z-index:19;pointer-events:none;opacity:.06;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:grain .6s steps(4) infinite}
+@keyframes grain{0%{transform:translate(0,0)}25%{transform:translate(-3%,2%)}50%{transform:translate(2%,-3%)}75%{transform:translate(-2%,-1%)}100%{transform:translate(1%,3%)}}
+
+.hud{position:fixed;left:0;right:0;bottom:0;height:var(--bar);z-index:30;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 16px;font-size:12px;letter-spacing:.12em;color:var(--muted)}
+.hud button,.hud a{background:none;border:1px solid rgba(243,239,230,.25);color:var(--ink);border-radius:100px;padding:7px 14px;font:inherit;letter-spacing:.12em;cursor:pointer;text-decoration:none;white-space:nowrap}
+.hud button:hover,.hud a:hover{border-color:var(--gold);color:var(--gold)}
+.dots{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.dots i{width:6px;height:6px;border-radius:50%;background:rgba(243,239,230,.25);cursor:pointer;transition:background .3s,transform .3s}
+.dots i.on{background:var(--gold);transform:scale(1.4)}
+.progress{position:fixed;left:0;bottom:var(--bar);height:2px;background:var(--gold);z-index:31;width:0}
+.top{position:fixed;left:0;right:0;top:0;height:var(--bar);z-index:30;display:flex;align-items:center;justify-content:space-between;padding:0 16px;font-size:11px;letter-spacing:.35em;text-transform:uppercase;color:rgba(243,239,230,.5)}
+.top img{height:26px;width:auto;opacity:.85}
+@media (max-width:560px){.dots{display:none}.top span{display:none}.cap{margin-bottom:calc(var(--bar) + 2vh)}}
+
+@media (prefers-reduced-motion:reduce){
+  .scene .art{transition:opacity .6s ease;transform:none!important}
+  .grain{animation:none}
+  .scene.on .roll{animation:none;transform:none}
+  .map .mask{transition:none}
+}
+</style>
+</head>
+<body class="bars">
+
+<div class="top">
+  <a href="index.html" aria-label="Volver al sitio"><img src="logo.png" alt="JOLS SAS"></a>
+  <span id="sceneLabel">Manguito</span>
+</div>
+
+<main class="reel" id="reel">
+
+  <!-- 0. Apertura -->
+  <section class="scene card">
+    <div class="cap">
+      <div class="presents">JOLS S.A.S. presenta</div>
+      <h1 class="title">Manguito</h1>
+      <div class="tagline">Rumbo a Europa</div>
+      <div class="hint">Desliza o pulsa ▶ Reproducir<b></b></div>
+    </div>
+  </section>
+
+  <!-- 1. Presentación -->
+  <section class="scene" data-label="Capítulo I · Un sueño">
+    <div class="blur" data-src="mango-1.jpg"></div><div class="art" data-src="mango-1.jpg" style="--fy:3%"></div><div class="shade"></div>
+    <div class="cap">
+      <span class="chapter">Capítulo I · Un sueño</span>
+      <h2><span class="sub">Este es Manguito.</span></h2>
+      <p><span class="sub">Nació en la Finca Durán, en la costa de Ecuador, con sombrero de paja y muchas ganas de conocer el mundo.</span></p>
+    </div>
+  </section>
+
+  <!-- 2. El sueño -->
+  <section class="scene" data-label="Capítulo I · Un sueño">
+    <div class="blur" data-src="mango-2.jpg"></div><div class="art" data-src="mango-2.jpg" style="--fx:-2%;--fy:-2%"></div><div class="shade"></div>
+    <div class="cap">
+      <h2><span class="sub">Cada atardecer miraba<br>los aviones cruzar el cielo…</span></h2>
+      <p><span class="sub">…y soñaba con llegar a Europa.</span></p>
+    </div>
+  </section>
+
+  <!-- 3. Las burlas -->
+  <section class="scene" data-label="Capítulo II · Las dudas">
+    <div class="blur" data-src="mango-3.jpg"></div><div class="art" data-src="mango-3.jpg" style="--fx:2%"></div><div class="shade"></div>
+    <div class="cap">
+      <span class="chapter">Capítulo II · Las dudas</span>
+      <h2><span class="sub">—¿Tú, a Europa? —se reía Verdecito—.<br>¡Ni el camión se detiene por ti!</span></h2>
+      <p class="line"><span class="sub">Pero Manguito sabía que solo los mejores hacen el viaje. Y él estaba madurando.</span></p>
+    </div>
+  </section>
+
+  <!-- 4. La cosecha -->
+  <section class="scene" data-label="Capítulo III · La cosecha">
+    <div class="blur" data-src="mango-4.jpg"></div><div class="art" data-src="mango-4.jpg" style="--fy:3%"></div><div class="shade"></div>
+    <div class="cap">
+      <span class="chapter">Capítulo III · La cosecha</span>
+      <h2><span class="sub">Hasta que una mañana<br>llegaron las cajas. ¡Era su turno!</span></h2>
+      <p><span class="sub">Los cosechadores lo eligieron con cuidado, en su punto exacto.</span></p>
+    </div>
+  </section>
+
+  <!-- 5. Seleccionado (foto real) -->
+  <section class="scene wide" data-label="Capítulo III · La cosecha">
+    <div class="blur" data-src="mango.jpg"></div><div class="art" data-src="mango.jpg" style="--fx:-3%"></div><div class="shade"></div>
+    <div class="cap">
+      <h2><span class="sub">Seleccionado. Empacado.<br><em>Calidad Superior.</em></span></h2>
+      <p><span class="sub">En JOLS, cada mango se revisa por tamaño, color y sabor antes de partir.</span></p>
+    </div>
+  </section>
+
+  <!-- 6. La travesía -->
+  <section class="scene voyage" data-label="Capítulo IV · La travesía">
+    <div class="map" aria-hidden="true">
+      <svg viewBox="0 0 760 360">
+        <path id="r" class="route" d="M150 270 C 260 150, 470 90, 610 95"/>
+        <path class="mask" d="M610 95 C 470 90, 260 150, 150 270"/>
+        <circle class="pin" cx="150" cy="270" r="7"/>
+        <circle class="pin" cx="610" cy="95" r="7"/>
+        <text x="150" y="304" text-anchor="middle">ECUADOR</text>
+        <text x="150" y="322" text-anchor="middle" class="small">FINCA DURÁN</text>
+        <text x="610" y="70" text-anchor="middle">EUROPA</text>
+        <text x="380" y="235" text-anchor="middle" class="small">OCÉANO ATLÁNTICO</text>
+        <g class="ship">
+          <text font-size="26" text-anchor="middle" dy="9">🥭
+            <animateMotion dur="5s" begin="indefinite" fill="freeze" id="sail"><mpath href="#r"/></animateMotion>
+          </text>
+        </g>
+      </svg>
+    </div>
+    <div class="cap">
+      <span class="chapter">Capítulo IV · La travesía</span>
+      <h2><span class="sub">Cruzó el océano<br>en cadena de frío.</span></h2>
+      <p><span class="sub">Días de viaje cuidado, para llegar tan fresco como salió del árbol.</span></p>
+    </div>
+  </section>
+
+  <!-- 7. Final -->
+  <section class="scene card" data-label="Epílogo">
+    <div class="blur" data-src="mango-1.jpg"></div><div class="shade"></div>
+    <div class="cap">
+      <span class="chapter">Epílogo</span>
+      <h2>Hoy, Manguito está en una mesa europea.</h2>
+      <p>Cumplió su sueño. Y desde la Finca Durán, Verdecito ya empieza a madurar…</p>
+    </div>
+  </section>
+
+  <!-- 8. Créditos -->
+  <section class="scene credits" data-label="Créditos">
+    <div class="roll">
+      <h3>Reparto</h3>
+      <dl>
+        <dt>Manguito</dt><dd>Él mismo</dd>
+        <dt>Verdecito</dt><dd>El mango que dudaba</dd>
+        <dt>Los cosechadores</dt><dd>Finca Durán</dd>
+        <dt>El camión</dt><dd>Su primer viaje</dd>
+      </dl>
+      <h3>Locaciones</h3>
+      <dl>
+        <dt>Origen</dt><dd>Finca Durán, Ecuador</dd>
+        <dt>Destino</dt><dd>Europa</dd>
+      </dl>
+      <h3>Producción</h3>
+      <dl>
+        <dt>Una producción de</dt><dd>JOLS S.A.S.</dd>
+        <dt>Rodada en</dt><dd>Ecuador</dd>
+      </dl>
+      <div class="end">
+        <img src="logo.png" alt="JOLS SAS">
+        <div class="serif" style="font-size:26px">¿Quieres que el próximo Manguito llegue a tu país?</div>
+        <a class="btn" href="https://wa.me/593959675996?text=Hola%20JOLS%2C%20vi%20la%20historia%20de%20Manguito%20y%20me%20interesa%20cotizar%20Mango" target="_blank" rel="noopener">Cotizar mango por WhatsApp</a>
+        <a class="btn ghost" href="index.html#productos">Ver catálogo</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" id="progress"></div>
+<div class="hud">
+  <button id="play" type="button">▶ Reproducir</button>
+  <div class="dots" id="dots"></div>
+  <a href="index.html">✕ Salir</a>
+</div>
+
+<script>
+(function(){
+  var reel=document.getElementById('reel');
+  var scenes=[].slice.call(document.querySelectorAll('.scene'));
+  var dots=document.getElementById('dots');
+  var label=document.getElementById('sceneLabel');
+  var playBtn=document.getElementById('play');
+  var bar=document.getElementById('progress');
+  var sail=document.getElementById('sail');
+  var current=0, timer=null, playing=false;
+  var DUR=7500, CREDITS_DUR=34000, FALLBACK='mango.jpg';
+
+  // Carga las imágenes; si una ilustración aún no está subida, usa la foto real del mango
+  [].forEach.call(document.querySelectorAll('[data-src]'),function(el){
+    var src=el.getAttribute('data-src'), img=new Image();
+    img.onload=function(){el.style.backgroundImage='url('+src+')'};
+    img.onerror=function(){el.style.backgroundImage='url('+FALLBACK+')'};
+    img.src=src;
+  });
+
+  scenes.forEach(function(s,i){
+    var d=document.createElement('i');d.title=s.dataset.label||'Apertura';
+    d.onclick=function(){go(i)};dots.appendChild(d);
+  });
+
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting&&e.intersectionRatio>.6){
+        scenes.forEach(function(s){if(s!==e.target)s.classList.remove('on')});
+        e.target.classList.add('on');
+        current=scenes.indexOf(e.target);
+        [].forEach.call(dots.children,function(d,i){d.classList.toggle('on',i===current)});
+        label.textContent=e.target.dataset.label||'Manguito';
+        if(e.target.classList.contains('voyage')&&sail&&sail.beginElement){setTimeout(function(){sail.beginElement()},800)}
+        if(playing)schedule();
+      }
+    });
+  },{threshold:[.6]});
+  scenes.forEach(function(s){io.observe(s)});
+
+  function go(i){scenes[Math.max(0,Math.min(i,scenes.length-1))].scrollIntoView({behavior:'smooth'})}
+
+  function schedule(){
+    clearTimeout(timer);
+    var dur=current===scenes.length-1?CREDITS_DUR:(current===0?5500:DUR);
+    bar.style.transition='none';bar.style.width='0';
+    void bar.offsetWidth;
+    bar.style.transition='width '+dur+'ms linear';bar.style.width='100%';
+    timer=setTimeout(function(){
+      if(current<scenes.length-1)go(current+1);else stop();
+    },dur);
+  }
+  function start(){playing=true;playBtn.textContent='❚❚ Pausa';schedule()}
+  function stop(){playing=false;clearTimeout(timer);playBtn.textContent='▶ Reproducir';bar.style.transition='none';bar.style.width='0'}
+  playBtn.onclick=function(){
+    if(playing)return stop();
+    if(current===scenes.length-1)go(0);
+    start();
+  };
+
+  document.addEventListener('keydown',function(e){
+    if(e.key===' '){e.preventDefault();playBtn.click()}
+    if(e.key==='ArrowDown'||e.key==='ArrowRight'||e.key==='PageDown'){e.preventDefault();go(current+1)}
+    if(e.key==='ArrowUp'||e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();go(current-1)}
+  });
+  reel.addEventListener('wheel',function(){if(playing)stop()},{passive:true});
+  reel.addEventListener('touchstart',function(){if(playing)stop()},{passive:true});
+})();
+</script>
+</body>
+</html>
