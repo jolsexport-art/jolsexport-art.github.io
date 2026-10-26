@@ -186,6 +186,21 @@ header.scrolled .hamburger span{background:var(--ink)}
 .usa-points span{display:block;font-size:12.5px;color:rgba(255,255,255,.72);line-height:1.5}
 .usa-text .usa-tag{font-family:'Playfair Display',serif;font-style:italic;font-size:19px;color:#fff;margin-bottom:26px}
 
+/* ---------- RELACION CON PROVEEDORES ---------- */
+.prov{background:var(--bg)}
+.prov-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:center}
+.prov-grid .usa-photo{order:2}
+.prov h2{font-size:clamp(30px,3.6vw,44px);font-weight:600;line-height:1.18;margin-bottom:24px;color:var(--green-dark)}
+.prov-quote{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(19px,1.9vw,23px);line-height:1.55;color:var(--green);border-left:4px solid var(--gold);padding:4px 0 4px 22px;margin:0 0 24px}
+.prov-quote cite{display:block;font-family:'Poppins',sans-serif;font-style:normal;font-size:12.5px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-top:12px}
+.prov-text>p{color:var(--muted);font-weight:300;font-size:15.5px;margin-bottom:16px}
+.prov-text>p strong{color:var(--green-dark);font-weight:600}
+.prov-points{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+.prov-points div{background:#fff;border-radius:14px;padding:16px;box-shadow:0 6px 18px rgba(9,61,43,.07);border-top:3px solid var(--gold);transition:.3s}
+.prov-points div:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.prov-points b{display:block;color:var(--green-dark);font-size:14px;font-weight:600;margin-bottom:4px}
+.prov-points span{display:block;font-size:12.5px;color:var(--muted);line-height:1.5}
+
 /* ---------- MISION / VISION ---------- */
 .mv-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
 .mv-card{border-radius:24px;padding:56px 46px;color:#fff;position:relative;overflow:hidden;transition:.35s}
@@ -253,6 +268,8 @@ footer{background:var(--dark);color:#fff;padding:80px 0 0}
   .lyo-grid,.pellets-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:48px}
   .mv-grid{grid-template-columns:1fr}
   .usa-grid{grid-template-columns:1fr;gap:70px}
+  .prov-grid{grid-template-columns:1fr;gap:70px}
+  .prov-grid .usa-photo{order:0}
   .testi-grid{grid-template-columns:1fr 1fr}
   .foot-grid{grid-template-columns:1fr 1fr}
 }
@@ -278,6 +295,7 @@ footer{background:var(--dark);color:#fff;padding:80px 0 0}
   .stat b{font-size:28px}
   .mv-card{padding:40px 28px}
   .usa-points{grid-template-columns:1fr}
+  .prov-points{grid-template-columns:1fr}
   .usa .btn{width:100%;justify-content:center;padding:13px 18px;font-size:13.5px}
   .usa-name{left:14px;right:14px;padding:14px 16px}
   .usa-photo::before{inset:-10px 10px 10px -10px}
@@ -579,6 +597,33 @@ footer{background:var(--dark);color:#fff;padding:80px 0 0}
   </div>
 </section>
 
+<!-- ============ RELACION CON PROVEEDORES ============ -->
+<section class="sec prov" id="proveedores">
+  <div class="container prov-grid">
+    <div class="usa-photo reveal">
+      <img src="monica-jaramillo.webp" alt="Mónica Jaramillo, Relación con proveedores de JOLS" width="600" height="600" loading="lazy">
+      <div class="usa-name">
+        <b>Mónica Jaramillo</b>
+        <span>Relación con proveedores · JOLS S.A.S.</span>
+        <small>Quito · Ecuador</small>
+      </div>
+    </div>
+    <div class="prov-text reveal">
+      <span class="eyebrow">Relación con proveedores · Ecuador</span>
+      <h2>Conectamos el campo con nuevas oportunidades</h2>
+      <div class="gold-line" style="margin:0 0 26px"></div>
+      <blockquote class="prov-quote">“Detrás de cada caja que exportamos hay una familia que madrugó a cosecharla. Mi trabajo es que ese esfuerzo llegue al mundo con el valor que merece.”<cite>— Mónica Jaramillo</cite></blockquote>
+      <p><strong>Mónica Jaramillo</strong> es el puente entre JOLS y las fincas, productores y empacadoras con los que trabajamos. Conoce a cada proveedor, cuida que se cumplan la calidad y las certificaciones que pide el comprador, y procura que cada negocio sea justo para quien cultiva y para quien compra.</p>
+      <p>Así, cuando un importador recibe nuestra fruta, detrás hay una cadena de personas que se conocen por su nombre y responden por su trabajo.</p>
+      <div class="prov-points">
+        <div><b>Trato directo</b><span>Relación personal con cada finca y productor</span></div>
+        <div><b>Calidad en origen</b><span>Control antes de que la carga salga del campo</span></div>
+        <div><b>A largo plazo</b><span>Proveedores que crecen junto con JOLS</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ MISION / VISION ============ -->
 <section class="sec" id="mision">
   <div class="container">
@@ -694,6 +739,7 @@ footer{background:var(--dark);color:#fff;padding:80px 0 0}
         <ul>
           <li><a href="#nosotros">Sobre Nosotros</a></li>
           <li><a href="#estados-unidos">Socio en EE. UU.</a></li>
+          <li><a href="#proveedores">Relación con proveedores</a></li>
           <li><a href="#mision">Nuestra Misión</a></li>
           <li><a href="#mision">Visión</a></li>
         </ul>
