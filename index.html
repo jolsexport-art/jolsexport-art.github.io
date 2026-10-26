@@ -164,6 +164,28 @@ header.scrolled .hamburger span{background:var(--ink)}
 .value-chip{background:#fff;border-radius:14px;padding:14px 20px;box-shadow:0 6px 18px rgba(9,61,43,.07);font-size:13px;font-weight:500;display:flex;align-items:center;gap:10px}
 .value-chip i{color:var(--gold);font-style:normal}
 
+/* ---------- SOCIO EE. UU. ---------- */
+.usa{background:linear-gradient(140deg,var(--green-deep),var(--green-dark) 55%,#0b4a33);color:#fff;overflow:hidden}
+.usa::before{content:"";position:absolute;bottom:-160px;left:-140px;width:460px;height:460px;border-radius:50%;background:radial-gradient(circle,rgba(217,164,65,.14),transparent 65%)}
+.usa-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}
+.usa-photo{position:relative;max-width:440px;width:100%;justify-self:center;margin-bottom:30px}
+.usa-photo::before{content:"";position:absolute;inset:-16px 16px 16px -16px;border:2px solid var(--gold);border-radius:24px;opacity:.75}
+.usa-photo img{position:relative;border-radius:24px;box-shadow:0 30px 70px rgba(0,0,0,.45);width:100%;height:auto;aspect-ratio:1/1;object-fit:cover}
+.usa-name{position:absolute;left:22px;right:22px;bottom:-30px;background:#fff;color:var(--ink);border-radius:16px;padding:16px 22px;box-shadow:0 16px 34px rgba(0,0,0,.3);border-left:5px solid var(--gold);line-height:1.45}
+.usa-name b{font-family:'Playfair Display',serif;font-size:22px;color:var(--green-dark);display:block;line-height:1.2;margin-bottom:2px}
+.usa-name span{display:block;font-size:13px;color:var(--ink);font-weight:500}
+.usa-name small{display:block;font-size:11.5px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-top:2px}
+.usa h2{font-size:clamp(30px,3.6vw,44px);font-weight:600;line-height:1.18;margin-bottom:24px;color:#fff}
+.usa-text>p{color:rgba(255,255,255,.8);font-weight:300;font-size:15.5px;margin-bottom:16px}
+.usa-text>p strong{color:#fff;font-weight:600}
+.usa-text .usa-lead{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(20px,2vw,24px);color:var(--gold);line-height:1.5;font-weight:500;margin-bottom:22px}
+.usa-points{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:30px 0 26px}
+.usa-points div{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:16px;transition:.3s}
+.usa-points div:hover{background:rgba(217,164,65,.12);border-color:rgba(217,164,65,.45);transform:translateY(-4px)}
+.usa-points b{display:block;color:var(--gold);font-size:14px;font-weight:600;margin-bottom:4px}
+.usa-points span{display:block;font-size:12.5px;color:rgba(255,255,255,.72);line-height:1.5}
+.usa-text .usa-tag{font-family:'Playfair Display',serif;font-style:italic;font-size:19px;color:#fff;margin-bottom:26px}
+
 /* ---------- MISION / VISION ---------- */
 .mv-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
 .mv-card{border-radius:24px;padding:56px 46px;color:#fff;position:relative;overflow:hidden;transition:.35s}
@@ -230,6 +252,7 @@ footer{background:var(--dark);color:#fff;padding:80px 0 0}
   .grid{grid-template-columns:repeat(3,1fr)}
   .lyo-grid,.pellets-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:48px}
   .mv-grid{grid-template-columns:1fr}
+  .usa-grid{grid-template-columns:1fr;gap:70px}
   .testi-grid{grid-template-columns:1fr 1fr}
   .foot-grid{grid-template-columns:1fr 1fr}
 }
@@ -254,6 +277,10 @@ footer{background:var(--dark);color:#fff;padding:80px 0 0}
   .hero-ctas .btn{width:100%;justify-content:center}
   .stat b{font-size:28px}
   .mv-card{padding:40px 28px}
+  .usa-points{grid-template-columns:1fr}
+  .usa .btn{width:100%;justify-content:center;padding:13px 18px;font-size:13.5px}
+  .usa-name{left:14px;right:14px;padding:14px 16px}
+  .usa-photo::before{inset:-10px 10px 10px -10px}
 }
 .flavor img{width:100%;aspect-ratio:1/1;object-fit:cover;background:#fff;border-radius:12px;margin-bottom:10px}
 </style>
@@ -271,6 +298,7 @@ footer{background:var(--dark);color:#fff;padding:80px 0 0}
       <a href="#inicio">Inicio</a>
       <a href="#productos">Productos</a>
       <a href="#nosotros">Sobre Nosotros</a>
+      <a href="#estados-unidos">EE. UU.</a>
       <a href="#mision">Misión y Visión</a>
       <a href="#contacto" class="btn btn-green btn-nav">Contacto</a>
     </nav>
@@ -522,6 +550,35 @@ footer{background:var(--dark);color:#fff;padding:80px 0 0}
   </div>
 </section>
 
+<!-- ============ SOCIO EN ESTADOS UNIDOS ============ -->
+<section class="sec usa" id="estados-unidos">
+  <div class="container usa-grid">
+    <div class="usa-photo reveal">
+      <img src="marcos-sanchez.webp" alt="Marcos Sánchez, Gerente de JOLS International Trading LLC en Estados Unidos" width="640" height="640" loading="lazy">
+      <div class="usa-name">
+        <b>Marcos Sánchez</b>
+        <span>Gerente · JOLS International Trading LLC</span>
+        <small>Newark, New Jersey · EE. UU.</small>
+      </div>
+    </div>
+    <div class="usa-text reveal">
+      <span class="eyebrow">JOLS International Trading LLC · Estados Unidos</span>
+      <h2>Un puente directo entre Ecuador y Estados Unidos</h2>
+      <div class="gold-line" style="margin:0 0 26px"></div>
+      <p class="usa-lead">En el comercio exterior, la mercadería viaja en contenedores; los negocios viajan en la confianza.</p>
+      <p>Por eso JOLS tiene un socio del otro lado. <strong>Marcos Sánchez</strong>, ecuatoriano radicado en New Jersey, es el Gerente de <strong>JOLS International Trading LLC</strong>, nuestra empresa en Estados Unidos. Desde allá se reúne en persona con importadores y distribuidores, conoce cómo compra ese mercado y acompaña cada operación hasta que la carga llega a destino.</p>
+      <p>Mientras nuestro equipo en Ecuador selecciona el producto en la finca y prepara cada embarque, Marcos está en el país del comprador. El importador tiene a alguien de JOLS cerca, y el productor ecuatoriano tiene una puerta abierta a uno de los mercados más grandes del mundo.</p>
+      <div class="usa-points">
+        <div><b>Atención en EE. UU.</b><span>Reuniones presenciales con compradores y distribuidores</span></div>
+        <div><b>Mismo horario</b><span>Quito y New Jersey trabajan prácticamente a la misma hora</span></div>
+        <div><b>Un solo equipo</b><span>Origen en Ecuador, seguimiento en destino</span></div>
+      </div>
+      <p class="usa-tag">Dos países, un solo equipo y una misma palabra.</p>
+      <a href="tel:+19733433771" class="btn btn-amber">JOLS en EE. UU. · +1 (973) 343-3771</a>
+    </div>
+  </div>
+</section>
+
 <!-- ============ MISION / VISION ============ -->
 <section class="sec" id="mision">
   <div class="container">
@@ -636,6 +693,7 @@ footer{background:var(--dark);color:#fff;padding:80px 0 0}
         <h4>Empresa</h4>
         <ul>
           <li><a href="#nosotros">Sobre Nosotros</a></li>
+          <li><a href="#estados-unidos">Socio en EE. UU.</a></li>
           <li><a href="#mision">Nuestra Misión</a></li>
           <li><a href="#mision">Visión</a></li>
         </ul>
@@ -651,7 +709,7 @@ footer{background:var(--dark);color:#fff;padding:80px 0 0}
         </ul>
       </div>
     </div>
-    <div class="foot-bottom">© 2026 JOLS S.A.S. · RUC 1793203122001 · Edificio Iturrey, Bloque 2B, Piso E11-2, Barrio La Paz, Quito, Ecuador. Todos los derechos reservados.<br><small style="opacity:.55">Fotos de plantaciones vía Wikimedia Commons: Brian Snelson (CC BY 2.0), Pkraemer (CC BY-SA 4.0), Theglennpalacio (CC BY-SA 4.0).</small></div>
+    <div class="foot-bottom">© 2026 JOLS S.A.S. · RUC 1793203122001 · Edificio Iturrey, Bloque 2B, Piso E11-2, Barrio La Paz, Quito, Ecuador · JOLS International Trading LLC · New Jersey, EE. UU. Todos los derechos reservados.<br><small style="opacity:.55">Fotos de plantaciones vía Wikimedia Commons: Brian Snelson (CC BY 2.0), Pkraemer (CC BY-SA 4.0), Theglennpalacio (CC BY-SA 4.0).</small></div>
   </div>
 </footer>
 
