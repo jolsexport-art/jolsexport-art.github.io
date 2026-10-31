@@ -2,7 +2,7 @@
 
 ## Regla de uso
 Usa **de 4 a 6 hashtags por video** en esta combinación:
-- **1 de marca** (siempre): `#LaTerceraOpción`
+- **1 de marca** (siempre): `#SalvemosAlEcuador`, más `#LaTerceraOpción` como hashtag de campaña
 - **1 o 2 de alcance nacional**
 - **1 o 2 del tema del video**
 - **1 regional** (si el video es local)
@@ -10,7 +10,8 @@ Usa **de 4 a 6 hashtags por video** en esta combinación:
 Muchos hashtags no dan más alcance; los relevantes sí. Revisa en el buscador de TikTok cuáles tienen movimiento en la semana.
 
 ## 1. Marca (propios: hay que posicionarlos)
-- `#LaTerceraOpción` (principal)
+- `#SalvemosAlEcuador` (principal, nombre de la cuenta @salvemos_al_ecuador)
+- `#LaTerceraOpción` (campaña)
 - `#OtraOpciónEcuador`
 - `#EcuadorMereceMás`
 - `#TúDecides`
@@ -39,13 +40,13 @@ Muchos hashtags no dan más alcance; los relevantes sí. Revisa en el buscador d
 - **Insular:** `#Galápagos`
 
 ## 5. Combinaciones listas para copiar
-- **Lanzamiento o pregunta:** `#LaTerceraOpción #Ecuador #EcuadorDecide #TúDecides #PolíticaEcuador`
-- **Seguridad:** `#LaTerceraOpción #SeguridadEcuador #Ecuador #EcuadorSeguro`
-- **Apagones:** `#LaTerceraOpción #Apagones #CortesDeLuz #Ecuador`
-- **Educación cívica:** `#LaTerceraOpción #AprendeEnTikTok #PolíticaEcuador #Constitución`
-- **Entrevista en Guayaquil:** `#LaTerceraOpción #EntrevistaCallejera #Guayaquil #Ecuador`
-- **Encuesta:** `#LaTerceraOpción #EncuestaEcuador #TúDecides #Ecuador`
-- **Jóvenes:** `#LaTerceraOpción #JóvenesEcuador #PrimerVoto #Ecuador`
+- **Lanzamiento o pregunta:** `#SalvemosAlEcuador #LaTerceraOpción #Ecuador #EcuadorDecide #TúDecides #PolíticaEcuador`
+- **Seguridad:** `#SalvemosAlEcuador #LaTerceraOpción #SeguridadEcuador #Ecuador #EcuadorSeguro`
+- **Apagones:** `#SalvemosAlEcuador #LaTerceraOpción #Apagones #CortesDeLuz #Ecuador`
+- **Educación cívica:** `#SalvemosAlEcuador #LaTerceraOpción #AprendeEnTikTok #PolíticaEcuador #Constitución`
+- **Entrevista en Guayaquil:** `#SalvemosAlEcuador #LaTerceraOpción #EntrevistaCallejera #Guayaquil #Ecuador`
+- **Encuesta:** `#SalvemosAlEcuador #LaTerceraOpción #EncuestaEcuador #TúDecides #Ecuador`
+- **Jóvenes:** `#SalvemosAlEcuador #LaTerceraOpción #JóvenesEcuador #PrimerVoto #Ecuador`
 
 ## Qué evitar
 - Los hashtags con nombres de políticos en tono de ataque (`#FueraX`, insultos): suben la toxicidad y el riesgo de que TikTok marque el contenido.
