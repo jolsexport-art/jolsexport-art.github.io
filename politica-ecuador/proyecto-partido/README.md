@@ -1,6 +1,6 @@
 # Proyecto: Tercera Opción — nuevo partido político (Ecuador 2029)
 
-Cuenta oficial: **[@salvemos_al_ecuador](https://www.tiktok.com/@salvemos_al_ecuador)** · Marca: **Salvemos al Ecuador** (`#SalvemosAlEcuador`) · Campaña: **"¿Y si hubiera otra opción?"** (`#LaTerceraOpción`).
+Cuenta oficial: **[@salvemos_al_ecuador](https://www.tiktok.com/@salvemos_al_ecuador)** · Marca: **Salvemos al Ecuador · La 3ra** (`#SalvemosAlEcuador`, `#La3ra`) · Campaña: **"¿Y si hubiera otra opción?"** (`#LaTerceraOpción`).
 
 | # | Archivo | Contenido |
 |---|---------|-----------|
@@ -15,6 +15,7 @@ Cuenta oficial: **[@salvemos_al_ecuador](https://www.tiktok.com/@salvemos_al_ecu
 | 07 | [07-lanzamiento-salvemos-al-ecuador.md](07-lanzamiento-salvemos-al-ecuador.md) | **Lanzamiento en @salvemos_al_ecuador:** revisión del perfil, publicaciones de hoy con descripción y hashtags, y calendario |
 | 08 | [08-analisis-cuenta-tiktok.md](08-analisis-cuenta-tiktok.md) | **Análisis real de @salvemos_al_ecuador al 31 de octubre de 2026:** 130 videos, métricas, lo que funcionó, riesgos y qué cambiar |
 | — | [datos/](datos/tiktok-salvemos-al-ecuador-2026-10-31.csv) | CSV con las cifras de cada publicación (vistas, "me gusta", comentarios, compartidos, guardados, fecha, duración y descripción) |
+| 09 | [09-identidad-la-3ra.md](09-identidad-la-3ra.md) | **Identidad "Salvemos al Ecuador · La 3ra":** qué significa el nombre, 8 principios de una tercera vía real, agenda en positivo, prueba antes de publicar y registro de cambios en TikTok |
 
 ## Primeros 7 días (acción inmediata)
 1. Formar el equipo núcleo y elegir quién sale a cámara.

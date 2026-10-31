@@ -147,3 +147,11 @@ Esto es un análisis preventivo, no asesoría legal. Para decidir sobre una publ
 - Se leyeron las cifras que TikTok muestra en cada publicación: vistas, "me gusta", comentarios, compartidos, guardados y reposts, más la fecha, la duración y la descripción.
 - Las horas están en hora de Ecuador (UTC-5).
 - No incluye datos que solo están en las estadísticas internas de TikTok (tiempo de visualización, procedencia del público, edad, provincia). Para eso, revisa **Herramientas de creador → Estadísticas** en la app.
+
+## 12. Cambios aplicados (31 de octubre de 2026)
+- Nombre visible cambiado a `Salvemos al Ecuador · La 3ra`.
+- 15 publicaciones con insultos pasadas a "Solo yo".
+- 12 publicaciones con `#PaidPartnership` pendientes: TikTok las marcó como contenido comercial y solo se pueden cambiar desde la app.
+- Las publicaciones 82, 98 y 110 siguen públicas por decisión del dueño de la cuenta.
+
+Detalle y pasos en [`09-identidad-la-3ra.md`](09-identidad-la-3ra.md).

@@ -12,6 +12,7 @@ Muchos hashtags no dan más alcance; los relevantes sí. Revisa en el buscador d
 ## 1. Marca (propios: hay que posicionarlos)
 - `#SalvemosAlEcuador` (principal, nombre de la cuenta @salvemos_al_ecuador)
 - `#LaTerceraOpción` (campaña)
+- `#La3ra` (corto, del nombre visible "Salvemos al Ecuador · La 3ra")
 - `#OtraOpciónEcuador`
 - `#EcuadorMereceMás`
 - `#TúDecides`

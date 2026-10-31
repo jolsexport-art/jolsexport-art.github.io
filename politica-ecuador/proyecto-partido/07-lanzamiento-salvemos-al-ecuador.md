@@ -2,15 +2,15 @@
 
 Perfil: https://www.tiktok.com/@salvemos_al_ecuador
 
-> **Análisis del perfil (31 de octubre de 2026):** ver [`08-analisis-cuenta-tiktok.md`](08-analisis-cuenta-tiktok.md). Antes de publicar, cambia el nombre visible "NI BORREGO - NI FLORINDO" y pasa a privado las publicaciones de riesgo que señala esa ficha.
+> **Actualizado el 31 de octubre de 2026:** el nombre visible ya es `Salvemos al Ecuador · La 3ra` y 15 publicaciones con insultos pasaron a "Solo yo". Ver [`09-identidad-la-3ra.md`](09-identidad-la-3ra.md) (identidad y cambios) y [`08-analisis-cuenta-tiktok.md`](08-analisis-cuenta-tiktok.md) (análisis).
 
 ## 1. Lista de revisión del perfil (hazla tú hoy)
 | Elemento | Recomendación |
 |---|---|
-| **Nombre visible** | `Salvemos al Ecuador 🇪🇨` |
+| **Nombre visible** | `Salvemos al Ecuador · La 3ra` ✔️ (cambiado el 31 de octubre) |
 | **Usuario** | `@salvemos_al_ecuador` ✔️ (corto, claro, fácil de buscar) |
 | **Foto de perfil** | Fondo negro, punto ámbar y las letras "SAE" o "SALVEMOS" en blanco, con la misma identidad de los panfletos. Debe leerse bien en tamaño pequeño |
-| **Biografía (80 caracteres)** | `Ciudadanos, no políticos de siempre. ¿Y si hubiera otra opción? 🇪🇨 Súmate 👇` |
+| **Biografía (80 caracteres)** | `La 3ra opción para Ecuador: propuestas, no insultos. ¿Te sumas? 🇪🇨👇` |
 | **Enlace en la biografía** | El formulario de voluntarios (ver la ficha 05). Si TikTok aún no habilita el enlace, ponlo en el comentario fijado de cada video |
 | **Tipo de cuenta** | Personal o de creador. **No uses una cuenta de empresa para publicidad**: TikTok no permite anuncios políticos |
 | **Videos fijados (3)** | 1) Presentación ("Somos ciudadanos") · 2) Encuesta · 3) Los 5 compromisos |
@@ -57,6 +57,7 @@ TikTok permite subir imágenes en **modo foto (carrusel)**. Sube en este orden:
 ## 4. Hashtags de la marca
 - **Principal:** `#SalvemosAlEcuador` (va en **todas** las publicaciones)
 - **De la campaña:** `#LaTerceraOpción`
+- **Corto de la marca:** `#La3ra`
 - **Apoyo:** `#EcuadorMereceMás` · `#TúDecides`
 
 Combina 1 de marca, 1 de campaña, 1 o 2 nacionales y 1 o 2 del tema. El listado completo está en `04-hashtags.md`.
