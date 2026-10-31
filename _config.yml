@@ -1,0 +1,4 @@
+# Excluye de la web publica los archivos internos que no forman parte del sitio
+exclude:
+  - politica-ecuador/
+  - .claude/
