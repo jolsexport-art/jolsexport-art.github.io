@@ -2,8 +2,7 @@
 
 Perfil: https://www.tiktok.com/@salvemos_al_ecuador
 
-> **Nota:** el análisis del perfil quedó pendiente porque la red de esta sesión no permite abrir `tiktok.com`.
-> Cuando se habilite ese dominio, o si compartes capturas del perfil (biografía, seguidores, videos y sus estadísticas), se completa la sección 1 con datos reales.
+> **Análisis del perfil (31 de octubre de 2026):** ver [`08-analisis-cuenta-tiktok.md`](08-analisis-cuenta-tiktok.md). Antes de publicar, cambia el nombre visible "NI BORREGO - NI FLORINDO" y pasa a privado las publicaciones de riesgo que señala esa ficha.
 
 ## 1. Lista de revisión del perfil (hazla tú hoy)
 | Elemento | Recomendación |

@@ -13,6 +13,8 @@ Cuenta oficial: **[@salvemos_al_ecuador](https://www.tiktok.com/@salvemos_al_ecu
 | 05 | [05-campana-medicion.md](05-campana-medicion.md) | Campaña de 4 semanas para medir el apoyo, con formulario y tablero |
 | 06 | [06-reglas-legales-y-eticas.md](06-reglas-legales-y-eticas.md) | Reglas de TikTok, del CNE, de protección de datos y del COIP |
 | 07 | [07-lanzamiento-salvemos-al-ecuador.md](07-lanzamiento-salvemos-al-ecuador.md) | **Lanzamiento en @salvemos_al_ecuador:** revisión del perfil, publicaciones de hoy con descripción y hashtags, y calendario |
+| 08 | [08-analisis-cuenta-tiktok.md](08-analisis-cuenta-tiktok.md) | **Análisis real de @salvemos_al_ecuador al 31 de octubre de 2026:** 130 videos, métricas, lo que funcionó, riesgos y qué cambiar |
+| — | [datos/](datos/tiktok-salvemos-al-ecuador-2026-10-31.csv) | CSV con las cifras de cada publicación (vistas, "me gusta", comentarios, compartidos, guardados, fecha, duración y descripción) |
 
 ## Primeros 7 días (acción inmediata)
 1. Formar el equipo núcleo y elegir quién sale a cámara.
