@@ -25,6 +25,7 @@ Base de conocimiento político-jurídica del Ecuador. Esta carpeta se usa **solo
 | 10 | [10-panorama-politico-actual.md](10-panorama-politico-actual.md) | Panorama político al 31 de octubre de 2026: actores, ejes, seccionales del 29 de noviembre y escenarios |
 | 11 | [11-desempeno-presidente-noboa.md](11-desempeno-presidente-noboa.md) | Evaluación del desempeño de Daniel Noboa por áreas, con calificación y fuentes |
 | 12 | [12-tercera-opcion-presidencial-2029.md](12-tercera-opcion-presidencial-2029.md) | ¿Hay espacio para una tercera opción presidencial en 2029? Evidencia, condiciones y escenarios |
+| — | [proyecto-partido/](proyecto-partido/README.md) | **Proyecto nuevo partido:** hoja de ruta, estrategia de TikTok, guiones, panfletos, hashtags y campaña de medición |
 
 ## Cómo está hecho cada análisis
 
