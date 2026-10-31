@@ -12,8 +12,10 @@ Lanzada el **31 de octubre de 2026** en @salvemos_al_ecuador.
 ## 2. Lo publicado
 | Fecha y hora | Publicación | Estado |
 |---|---|---|
-| 31 oct, 13:12 | Panfleto `01-presentacion` (foto sola) | ✔️ Publicado, público |
-| 31 oct, 19:30 | Carrusel `10-campana-de-acuerdo` → `11-campana-quien-es-la-3ra` → `12-campana-como-participar` | ⏳ Programado en TikTok Studio |
+| 31 oct, 13:12 | Panfleto `01-presentacion` sin sonido | Pasado a "Solo yo" (reemplazado por la versión con sonido) |
+| 31 oct, 13:25 | Panfleto `01-presentacion` con el sonido **Epic Inspiration** (AShamaluevMusic) | ✔️ Publicado, público |
+| 31 oct, 19:30 | Carrusel `10` → `11` → `12` con el sonido **Dramatic Tension** (Litne) | ⏳ Programado en TikTok Studio |
+| 31 oct, 19:30 | El mismo carrusel **sin sonido** (programado antes) | ⚠️ Duplicado. TikTok no deja editar ni ocultar una publicación programada: hay que eliminarlo en Studio, o se pasa a "Solo yo" apenas salga |
 
 **Descripción del panfleto 1:**
 > Hola, Ecuador 🇪🇨 Somos ciudadanos, no políticos de siempre. Somos La 3ra: ni de unos ni de otros, de todos. ¿Desde qué provincia nos ves? Comenta 👇
@@ -65,3 +67,14 @@ Se regeneran con `node generar.js 10-campana-de-acuerdo 11-campana-quien-es-la-3
 - **Stitch o dúo** con videos virales sobre política, cerrando con "¿Y tú quién crees que debería ser La 3ra?".
 - **Horarios:** de 9:00 a 12:00 y desde las 19:30 (ficha 08). Nunca publicar en ráfagas.
 - **Prohibido:** comprar seguidores, likes o comentarios, usar cuentas falsas y pagar promoción. TikTok no permite publicidad política (ficha 06) y eso arruinaría la medición.
+
+## 8. Sonido
+- **Presentación (panfleto 1):** música épica e inspiradora, porque el mensaje es de esperanza ("somos ciudadanos").
+- **Campaña (pregunta):** música de tensión o suspenso, porque genera expectativa ("¿quién será La 3ra?") y retiene a la gente en el carrusel.
+- Siempre **instrumental**, sin letra que compita con el texto, y tomada de la biblioteca de sonidos de TikTok, para que no la silencien por derechos de autor.
+- En TikTok **no se puede cambiar el sonido de una publicación ya hecha**. Hay que elegirlo antes de publicar o de programar.
+
+## 9. Respuestas y difusión
+- **Respuestas a comentarios:** Claude lee los comentarios, redacta respuestas cortas y técnicas con fuente verificable (ley y artículo, o medio y fecha) y se las pasa a Cristian para que las apruebe antes de publicarlas. A los insultos no se les responde.
+- **Mensajes directos:** se aprobó enviar el mensaje de la campaña a los amigos mutuos de la cuenta (máximo 20 al día). Al 31 de octubre la cuenta tiene **0 amigos mutuos**, así que por ahora no hay a quién enviarlo. Los 1.180 seguidores ven las publicaciones en su feed.
+- **No se usan** el Gmail, el Instagram ni el LinkedIn de JOLS para la campaña.
