@@ -1,4 +1,4 @@
-// Genera los panfletos de "Salvemos al Ecuador". Uso: node generar.js (requiere playwright)
+// Genera los panfletos de "Salvemos al Ecuador". Uso: node generar.js [nombres...] (requiere playwright)
 const { chromium } = require('playwright');
 const path = require('path');
 
@@ -92,6 +92,31 @@ const flyers = {
     <div class="li"><span class="n">4</span><span>Respeto a quien votó por cualquier opción.</span></div>
     <div class="li"><span class="n">5</span><span>Cuentas claras de cada dólar.</span></div>
     ${foot('Si no cumplimos, exígenos')}`],
+  '10-campana-de-acuerdo': [...V, `
+    <div class="tag">CONSULTA CIUDADANA · 2029</div>
+    <div class="big" style="font-size:118px;margin-top:40px">¿ESTÁS DE ACUERDO CON UNA <span class="amb">TERCERA OPCIÓN</span> PARA ECUADOR?</div>
+    <div style="display:flex;gap:28px;margin-top:60px">
+      <div class="box" style="flex:1;text-align:center;background:${AMBAR};color:${NEGRO};font-size:84px">SÍ</div>
+      <div class="box" style="flex:1;text-align:center;color:${BLANCO};border-color:#555;font-size:84px">NO</div></div>
+    <div class="sub" style="margin-top:50px">Comenta <span class="w">SÍ o NO</span> y <span class="w">tu provincia</span>. Desliza 👉 y propón a alguien.</div>
+    ${foot('Consulta abierta a nuestra comunidad')}`],
+  '11-campana-quien-es-la-3ra': [...V, `
+    <div class="tag">TÚ PROPONES</div>
+    <div class="big" style="font-size:132px;margin-top:40px">¿QUIÉN<br>DEBERÍA SER<br><span class="amb">LA 3RA?</span></div>
+    <div class="sub" style="margin-top:44px;margin-bottom:50px">Escribe el <span class="w">nombre</span> de la persona que te gustaría ver de candidata en 2029, y <span class="w">por qué</span>.</div>
+    <div class="li"><span class="n">1</span><span>Que no sea ni del Gobierno ni del correísmo.</span></div>
+    <div class="li"><span class="n">2</span><span>Alcalde, prefecta, profesional o líder de tu barrio: tú decides.</span></div>
+    <div class="li"><span class="n">3</span><span>Solo propuestas. Cero insultos.</span></div>
+    ${foot('#QuienEsLa3ra')}`],
+  '12-campana-como-participar': [...V, `
+    <div class="tag">ASÍ PARTICIPAS</div>
+    <div class="big" style="font-size:120px;margin-top:40px;margin-bottom:60px">4 PASOS, <span class="amb">1 MINUTO</span></div>
+    <div class="li"><span class="n">1</span><span>Comenta <b class="amb">SÍ</b> o <b>NO</b>.</span></div>
+    <div class="li"><span class="n">2</span><span>Escribe un nombre y por qué.</span></div>
+    <div class="li"><span class="n">3</span><span>Dinos tu provincia.</span></div>
+    <div class="li"><span class="n">4</span><span>Comparte con 3 personas que votaron distinto a ti.</span></div>
+    <div style="margin-top:40px"><span class="cta">En diciembre publicamos el conteo</span></div>
+    ${foot('No es una encuesta electoral: es una consulta abierta')}`],
   '09-impreso-a5': [1748, 2480, `
     <div class="tag">ECUADOR 2029</div>
     <div class="big" style="font-size:220px;margin-top:70px">¿Y SI HUBIERA <span class="amb">OTRA OPCIÓN?</span></div>
@@ -103,8 +128,10 @@ const flyers = {
 };
 
 (async () => {
+  const solo = process.argv.slice(2); // opcional: node generar.js 10-campana-de-acuerdo ...
   const browser = await chromium.launch();
   for (const [name, [w, h, body, print]] of Object.entries(flyers)) {
+    if (solo.length && !solo.includes(name)) continue;
     const p = await browser.newPage({ viewport: { width: w, height: h } });
     await p.setContent(page(w, h, body, print), { waitUntil: 'load' });
     await p.screenshot({ path: path.join(__dirname, `${name}.png`) });

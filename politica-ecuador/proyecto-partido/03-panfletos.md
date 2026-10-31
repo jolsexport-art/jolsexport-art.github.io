@@ -24,6 +24,9 @@ Las imágenes están en `panfletos/` y se regeneran con `node panfletos/generar.
 | `07-encuesta.png` | 1080×1920 | ¿Votarías por una tercera opción en 2029? |
 | `08-compromisos.png` | 1080×1920 | Nuestros 5 compromisos éticos |
 | `09-impreso-a5.png` | A5 a 300 dpi | Volante impreso con espacio para el código QR |
+| `10-campana-de-acuerdo.png` | 1080×1920 | Campaña: ¿Estás de acuerdo con una tercera opción? SÍ / NO |
+| `11-campana-quien-es-la-3ra.png` | 1080×1920 | Campaña: ¿Quién debería ser La 3ra? (nombres para 2029) |
+| `12-campana-como-participar.png` | 1080×1920 | Campaña: 4 pasos para participar; conteo en diciembre |
 
 El orden y las descripciones de publicación están en `07-lanzamiento-salvemos-al-ecuador.md`.
 
