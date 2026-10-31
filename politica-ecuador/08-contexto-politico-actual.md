@@ -23,6 +23,9 @@
 | **7 de octubre de 2025** | Entra en vigencia la **reforma a la ley de contratación pública**, que recoge parte del contenido de la ley anulada |
 | **16 de noviembre de 2025** | **Referéndum y consulta popular de 4 preguntas: gana el "No" en las cuatro.** Las preguntas eran: bases militares extranjeras, eliminación del financiamiento público a los partidos, reducción del número de asambleístas y **convocatoria a una Asamblea Constituyente** |
 | **1 de diciembre de 2025** | El CNE proclama los resultados definitivos |
+| **6 de marzo de 2026** | Un juez del TCE suspende por 9 meses a Revolución Ciudadana (caso Caja Chica); el TCE lo ratifica en abril |
+| **8 de junio de 2026** | Mishel Mancheno (ADN) asume la presidencia de la Asamblea |
+| **2026** | Nueva crisis eléctrica por sequía; avanza el caso Progen (prisión preventiva para el exministro Goncalves) |
 
 ## Actores principales
 - **Presidente de la República:** Daniel Noboa Azín (ADN), periodo 2025–2029.
@@ -30,18 +33,18 @@
   - **Bloques principales:** ADN (oficialismo), Revolución Ciudadana (correísmo, principal oposición), Partido Social Cristiano (PSC) y Pachakutik, además de otras fuerzas menores.
   - **Asambleístas nacionales (15):** 7 de ADN, 7 de RC-RETO y 1 del PSC.
   - El oficialismo consolidó la mayoría para elegir a las autoridades legislativas con alianzas y adhesiones.
-  - **Presidencia de la Asamblea:** Niels Olsen fue elegido en mayo de 2025 por dos años. **Pendiente verificar** si sigue en el cargo: hay reportes de su renuncia y reemplazo sin fecha confirmada.
+  - **Presidencia de la Asamblea:** Niels Olsen (mayo de 2025 a junio de 2026); desde el **8 de junio de 2026** la preside **Mishel Mancheno (ADN)**.
 - **Organizaciones políticas relevantes:** ADN (Acción Democrática Nacional), RC (Revolución Ciudadana), PSC, Pachakutik, Construye, RETO, Izquierda Democrática, Partido Sociedad Patriótica, CREO, Avanza y movimientos provinciales.
 
 ## Lecturas políticas
 1. **El rechazo a la Constituyente (noviembre de 2025)** consolida la vigencia de la Constitución de 2008. Cualquier cambio estructural tendrá que hacerse por enmienda o reforma parcial (arts. 441–442), o por leyes orgánicas.
 2. **La Corte Constitucional** se volvió un actor decisivo: controla las leyes urgentes y la unidad de materia, y ha anulado o suspendido normas del Ejecutivo y la Asamblea.
 3. **Seguridad** es el eje de la agenda (conflicto armado interno, reformas penales, debate sobre bases extranjeras).
-4. **Reforma electoral de 2025 (D'Hondt):** favorece a las listas más votadas. En las seccionales de 2027 las alianzas pesarán más para las fuerzas medianas y pequeñas.
+4. **Reforma electoral de 2025 (D'Hondt):** favorece a las listas más votadas. En las seccionales de noviembre de 2026 las alianzas pesarán más para las fuerzas medianas y pequeñas.
 5. **Financiamiento de partidos:** se mantiene el financiamiento público tras la consulta, con más controles introducidos por la reforma de 2025.
 
 ## Próximos hitos (verificar con el CNE)
-- **Elecciones seccionales y del CPCCS:** previstas para **2027** (prefectos, alcaldes, concejales, vocales parroquiales y consejeros del CPCCS).
+- **Elecciones seccionales y del CPCCS: 29 de noviembre de 2026** (el CNE adelantó la fecha). Ver el análisis en `10-panorama-politico-actual.md`.
 - **Renovación parcial** de órganos de control y de la Corte Constitucional, según los calendarios constitucionales.
 - **Ventana de reforma electoral:** según el art. 117 de la Constitución, no puede reformarse la ley electoral durante el año anterior a una elección.
 

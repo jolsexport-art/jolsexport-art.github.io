@@ -46,7 +46,7 @@ Regula **cómo se llega al poder**: quién puede votar y ser candidato, cómo se
 | Seccionales | Prefectos y viceprefectos, alcaldes, concejales urbanos y rurales, vocales de juntas parroquiales, consejeros del CPCCS | 4 años |
 
 Las elecciones generales más recientes fueron en 2025 (primera vuelta en febrero y segunda vuelta el 13 de abril).
-Las próximas seccionales están previstas para 2027; conviene verificar el calendario del CNE.
+Las próximas seccionales son el **29 de noviembre de 2026** (el CNE adelantó la fecha).
 
 ### Candidaturas
 - **Quién inscribe:** los partidos, los movimientos y las alianzas, mediante procesos de **democracia interna** (primarias o elecciones internas) supervisados por el CNE.

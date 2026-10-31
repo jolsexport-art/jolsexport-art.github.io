@@ -22,6 +22,8 @@ Base de conocimiento político-jurídica del Ecuador. Esta carpeta se usa **solo
 | 07 | [07-coip.md](07-coip.md) | COIP: delitos relevantes para la actividad política y la función pública |
 | 08 | [08-contexto-politico-actual.md](08-contexto-politico-actual.md) | Coyuntura: Gobierno, Asamblea, partidos, consultas 2024 y 2025, reformas recientes |
 | 09 | [09-guia-practica.md](09-guia-practica.md) | Guía rápida del político: qué norma usar en cada situación, plazos, mayorías y riesgos |
+| 10 | [10-panorama-politico-actual.md](10-panorama-politico-actual.md) | Panorama político al 31 de octubre de 2026: actores, ejes, seccionales del 29 de noviembre y escenarios |
+| 11 | [11-desempeno-presidente-noboa.md](11-desempeno-presidente-noboa.md) | Evaluación del desempeño de Daniel Noboa por áreas, con calificación y fuentes |
 
 ## Cómo está hecho cada análisis
 
